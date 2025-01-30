@@ -1,0 +1,71 @@
+.categoryWrapper {
+    position: relative;
+    text-align: center;
+    width: 100%;
+   }
+
+.flex-container {
+    align-items: center;
+    display: flex;
+    /* text-align: center; */
+    /* flex-direction: row; */
+    justify-content: center;
+  }
+.categoryImg {
+    cursor: pointer;
+    display: inline-block;
+    margin: 2px;
+    padding: 10px 20px;
+    vertical-align: top;
+}
+.categoryIconStyle {
+    fill: #6c6f78;
+    height: 40px;
+    width: 40px;
+    margin-top: 1px;
+    
+}
+.face {
+    cursor: pointer;
+    background: none;
+    border-style: none;
+    color: #6c6f78;
+    font-size: 30px;
+    margin-top: 10px;
+}
+.shirt{
+    
+    /* background-color:#a4a6bd; */
+    border-style: none;        
+    cursor:pointer;
+    color: #6c6f78;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.eye{
+
+    background:none;
+    border-style: none;        
+    cursor:pointer;
+    color: #6c6f78;
+    font-size: 30px;
+    margin-top: 10px;
+  
+    
+    
+       
+  }
+  .glass{
+    background: none;
+    border-style: none;        
+    cursor:pointer;
+    color: #6c6f78;
+    font-size: 30px;
+    margin-top: 10px;
+   
+  }
+.hair{
+    top:10px;
+    
+}

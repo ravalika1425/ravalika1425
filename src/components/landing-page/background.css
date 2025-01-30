@@ -1,0 +1,36 @@
+.backgr{    
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom right, rgb(10,63,135), rgb(24,14,32), rgb(2,0,2)),
+                linear-gradient(to top left, blue, blue),
+                linear-gradient(to top right, blue, blue),
+                linear-gradient(to bottom left, blue, blue);
+        background-clip: content-box;
+        background-size: cover;
+        background-repeat: no-repeat;
+        scroll-behavior: smooth;
+        border-radius: 0;
+                
+}
+
+
+
+.mask_man{
+        position: absolute;
+        width: 1150px;
+        height: 800px;
+        /* left: 0;
+        top: 0; */
+        right: 0;
+        bottom: 0;
+        background: url(/src/assets/Landing_Image.png);
+        background-repeat: no-repeat;
+        background-size:cover;
+        margin-right: 50px;
+        /* z-index:1; */
+    }
+
+

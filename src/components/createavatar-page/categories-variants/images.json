@@ -1,0 +1,226 @@
+{
+    "headIcons": [
+      {
+        "id": "1", 
+        "src": "asset/img/face1.png",
+        "alt": "Face 1",
+        "gltfPath": "models/headbody2.glb"
+      },
+      {
+        "src": "asset/img/face2.png",
+        "alt": "Face 2",
+        "gltfPath": "models/headbody2.glb"
+      },
+      {
+        "src": "asset/img/face3.png",
+        "alt": "Face 3",
+        "gltfPath": "models/headbody3.glb"
+      },
+      {
+        "src": "asset/img/face4.png",
+        "alt": "Face 4",
+        "gltfPath": "models/headbody4.glb"
+      }
+    ],
+    "femaleheadIcons": [
+      {
+        "id": "1", 
+        "src": "asset/img/face1.png",
+        "alt": "Face 1",
+        "gltfPath": "models/femalehead1.glb"
+      },
+      {
+        "src": "asset/img/face2.png",
+        "alt": "Face 2",
+        "gltfPath": "models/femalehead2.glb"
+      },
+      {
+        "src": "asset/img/face3.png",
+        "alt": "Face 3",
+        "gltfPath": "models/femalehead3.glb"
+      },
+      {
+        "src": "asset/img/face4.png",
+        "alt": "Face 4",
+        "gltfPath": "models/femalehead4.glb"
+      }
+    ],
+    "shirtIcons": [
+      {
+        "src": "asset/img/shirt1.png",
+        "alt": "Fighter",
+        "gltfPath": "models/outfit1.glb"
+      },
+      {
+        "src": "asset/img/shirt4.png",
+        "alt": "Cool",
+        "gltfPath": "models/outfit2.glb"
+      },
+      {
+        "src": "asset/img/shirt2.png",
+        "alt": "Rider",
+        "gltfPath": "models/outfit3.glb"
+      },
+      {
+        "src": "asset/img/shirt3.png",
+        "alt": "Party Wear",
+        "gltfPath": "models/outfit4.glb"
+      }
+    ],
+    "femaleshirtIcons": [
+      {
+        "src": "asset/img/femaleshirt5.png",
+        "alt": "Fighter",
+        "gltfPath": "models/femaleoutfit1.glb"
+      },
+      {
+        "src": "asset/img/shirt4.png",
+        "alt": "Cool",
+        "gltfPath": "models/femaleoutfit2.glb"
+      },
+      {
+        "src": "asset/img/femaleshirt6.png",
+        "alt": "Rider",
+        "gltfPath": "models/femaleoutfit3.glb"
+      },
+      {
+        "src": "asset/img/femaleshirt4.png",
+        "alt": "Party Wear",
+        "gltfPath": "models/femaleoutfit4.glb"
+      }
+    ],
+    "beardIcons": [
+      {
+        "src": "asset/img/beard1.png",
+        "alt": "Beard 1",
+        "gltfPath": "models/beard1.glb"
+      },
+      {
+        "src": "asset/img/beard2.png",
+        "alt": "Beard 2",
+        "gltfPath": "models/beard2.glb"
+      },
+      {
+        "src": "asset/img/beard3.png",
+        "alt": "Beard 3",
+        "gltfPath": "models/beard3.glb"
+      },
+      {
+        "src": "asset/img/beard4.png",
+        "alt": "Beard 4",
+        "gltfPath": "models/beard1.glb"
+      }
+    ],
+    "eyeIcons": [
+      {
+        "src": "asset/img/eye1.jpg",
+        "alt": "Eye 1",
+        "gltfPath": "models/eye1.glb"
+      },
+      {
+        "src": "asset/img/eye2.jpg",
+        "alt": "Eye 2",
+        "gltfPath": "models/eye2.glb"
+      },
+      {
+        "src": "asset/img/eye3.jpg",
+        "alt": "Eye 3",
+        "gltfPath": "models/eye1.glb"
+      },
+      {
+        "src": "asset/img/eye4.jpg",
+        "alt": "Eye 4",
+        "gltfPath": "models/eye4.glb"
+      }
+    ],
+    "femaleeyeIcons": [
+      {
+        "src": "asset/img/eye1.jpg",
+        "alt": "Eye 1",
+        "gltfPath": "models/femaleeye1.glb"
+      },
+      {
+        "src": "asset/img/eye2.jpg",
+        "alt": "Eye 2",
+        "gltfPath": "models/femaleeye2.glb"
+      },
+      {
+        "src": "asset/img/eye3.jpg",
+        "alt": "Eye 3",
+        "gltfPath": "models/femaleeye1.glb"
+      },
+      {
+        "src": "asset/img/eye4.jpg",
+        "alt": "Eye 4",
+        "gltfPath": "models/femaleeye4.glb"
+      }
+    ],
+    "glassIcons": [
+      {
+        "src": "asset/img/glass1.png",
+        "alt": "Glass 1",
+        "gltfPath": "models/glass1.glb"
+      },
+      {
+        "src": "asset/img/glass2.png",
+        "alt": "Glass 2",
+        "gltfPath": "models/glass2.glb"
+      },
+      {
+        "src": "asset/img/glass3.png",
+        "alt": "Glass 3",
+        "gltfPath": "models/glass3.glb"
+      },
+      {
+        "src": "asset/img/glass4.png",
+        "alt": "Glass 4",
+        "gltfPath": "models/glass4.glb"
+      }
+    ],
+    "femaleglassIcons": [
+      {
+        "src": "asset/img/glass1.png",
+        "alt": "Glass 1",
+        "gltfPath": "models/femaleglass1.glb"
+      },
+      {
+        "src": "asset/img/glass2.png",
+        "alt": "Glass 2",
+        "gltfPath": "models/femaleglass2.glb"
+      },
+      {
+        "src": "asset/img/glass3.png",
+        "alt": "Glass 3",
+        "gltfPath": "models/femaleglass3.glb"
+      },
+      {
+        "src": "asset/img/glass4.png",
+        "alt": "Glass 4",
+        "gltfPath": "models/femaleglass4.glb"
+      }
+    ],
+    "hairIcons":[
+      {
+        "src": "asset/img/femalehair1.png",
+        "alt": "Hair 1",
+        "gltfPath": "models/femalehair1.glb"
+      },
+      {
+        "src": "asset/img/femalehair2.png",
+        "alt": "Hair 2",
+        "gltfPath": "models/femalehair2.glb"
+      },
+      {
+        "src": "asset/img/femalehair3.png",
+        "alt": "Hair 3",
+        "gltfPath": "models/femalehair3.glb"
+      },
+      {
+        "src": "asset/img/femalehair4.png",
+        "alt": "Hair 4",
+        "gltfPath": "models/femalehair4.glb"
+      }
+    ]
+
+  }
+  

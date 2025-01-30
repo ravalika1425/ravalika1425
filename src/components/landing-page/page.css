@@ -1,0 +1,260 @@
+.ascendion_icon {   
+    position: absolute;
+    width: 105px;
+    height: 105px;
+    margin-left: 10px;
+    margin-top: 10px;
+    background: url(/src/assets/asc.jpg) no-repeat;
+    background-size: 105px;
+    border-radius: 50%;
+}
+
+.title {
+    position:relative; 
+    font-weight: bold;
+    /* margin-left: 135px; */
+    /* margin: 0;
+    padding: 0;    */
+    color: #FFFFFF;
+    font-family: "Avenir", sans-serif;
+    flex-grow: 1;
+    /* font-weight: bold; */
+    font-size: 30px;
+    letter-spacing: 0.05em;
+}
+.home {
+    background: url(/src/assets/homedefault.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #FFFFFF;
+    font-family: "Avenir" sans-serif;
+    border-style: none;
+    font-size: 16pt;
+    padding-top: 18px;
+    /* margin-top: 43px; */
+    margin-right: 50px;
+    text-align: center; 
+  }
+  
+  .home:hover {
+    background: url(/src/assets/homehover.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+.signin{
+    width: 35px;
+    height: 35px;
+    /* margin-top: 43px; */
+    background: url(/src/assets/login_default.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 50px;
+    text-align: center; 
+    border-style: none;
+}
+.signin:hover{
+    background: url(/src/assets/login_hover.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-style: none;
+}
+.signout{
+    width: 35px;
+    height: 35px;
+    /* margin-top: 43px; */
+    background: url(/src/assets/register_default.png); 
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center; 
+    border-style: none;
+}
+.signout:hover{
+    background: url(/src/assets/register_hover.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-style: none;
+
+}
+
+.exper{
+        position:static; 
+        padding-top: 55px;
+        font-family: "Avenir", sans-serif;
+        font-size: 70px; 
+        line-height: 0px;
+        margin-left: 145px;
+        color: #FFFFFF;
+        text-transform: uppercase;
+    
+}
+.metaverse {
+    margin-top: 35px;
+    padding: 0; 
+    position: relative;
+    padding-left: 145px;
+    font-style: normal;
+    font-family: "Avenir", sans-serif; 
+    font-size: 136px; 
+    color: #00fac2;
+    text-transform: uppercase;
+    font-weight: black;
+    
+}
+.create{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    padding-left: 150px;
+    margin-top: 105px;
+    font-family: "Avenir", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 50;
+    letter-spacing: 0.1em;
+    line-height: 23px;
+    color: #FFFFFF;
+
+}
+.cust{
+    margin-left: 155px;
+    position: absolute;
+    font-family: "Avenir", sans-serif;
+    font-style: normal;
+    /* letter-spacing: 0.05em; */
+    font-size:15px;
+    /* margin: 0; */
+    padding: 0;
+    margin-top: 15px;
+    color: #FFFFFF;
+}
+
+.bton{
+    width: 185px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #b90d63;
+    font-family:"Avenir", sans-serif;
+    font-size: 12.5103pt;
+    letter-spacing: 0.10em;
+    color: white;
+    font-weight: 600;
+    border-style: none;
+    background-size: 50px;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    align-items: center;
+
+}
+
+
+.content{
+    position: absolute;
+    width: 447.57px;
+    height: 347.96px;
+    left: 50.37px;
+    top: 800.97px;
+    border-top-right-radius: 20px;
+    border-top-left-radius:20px ;
+    background-color:rgba(44, 44, 52, 0.963);
+    background-size: 100px;
+
+}
+
+/* .mask_girl{
+    position: absolute;
+    width: 460.55px;
+    height: 350.02px;
+    background: url(/src/assets/mask_girl.jpg);
+    background-repeat: no-repeat;
+    background-size: 447px;
+} */
+
+/* .customize{
+    position: absolute;
+    width: 180.69px;
+    height: 22.71px;
+    left: 75.4px;
+    top: 250.28px;
+    font-family: "Helvetica Neue Light", sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 15.5848px;
+    line-height: 22px;
+    color: #FFFFFF;
+
+}
+.identity{
+    position: absolute;
+    width: 272.4px;
+    height: 19.39px;
+    left: 75.4px;
+    top: 275.19px;
+    font-family: "Helvetica Neue Light", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14.6319px;
+    line-height: 19px;
+    color: #FFFFFF;
+
+}
+
+.audio{
+    box-sizing: border-box;
+    position: absolute;
+    width: 53.69px;
+    height: 53.69px;
+    left: 365.11px;
+    top: 220.23px;
+    background:  #FE11BE; 
+    border: 1.61928px solid #FFFFFF;
+    border-radius: 30px;
+    transform: rotate(90deg);
+}
+
+.symbol{
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 386.51px;
+    top: 236.83px;
+    border-radius: 2.42892px;
+    border-top: 10px solid transparent;
+    border-left: 15px solid #FFFFFF;
+    border-bottom: 10px solid transparent;
+} */
+
+/* .mask_man {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    right: 0;
+    bottom: 0;
+    background: url(/src/assets/Landing_Image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 50px;
+
+} */
+
+.head{
+    width: 600px;
+    position: absolute;
+    font-family: "Helvetica Neue Light", sans-serif;
+    font-size: 40px;
+    left: 600px;
+    top:730px;
+    line-height: 40px;
+    color: white;
+}
+
+.pera{
+    position: absolute;
+    font-size: 20px;
+    color:white;
+    top: 850px;
+    left:600px;
+    font-family: "Helvetica Neue Light", sans-serif;
+    width: 800px;
+}

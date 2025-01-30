@@ -1,0 +1,128 @@
+.genderBtn {
+    border: none;
+    position: absolute;
+    cursor: pointer;
+    font-weight: heavy; 
+    font-size: 50px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    background: none;
+    transform: rotate(-17deg);
+    top: 40.5%;
+    left: 41.5%;
+    margin-top: 175px; 
+}
+.genderBtn1 {
+    
+    
+    padding: 10px;
+    border-radius: 10px;
+    line-height: 0;
+    position: absolute;
+    text-align: right;
+    border: none;
+    cursor: pointer;
+    font-weight: heavy; 
+    font-size: 50px;
+    right: 0; 
+    top: 178px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    background: none;
+    transform: rotate(-13deg);
+    padding-top: 340px;
+    margin-right: 60px;
+   
+}
+
+
+.genderBtn2 {
+    padding: 10px;
+    border-radius: 10px;
+    line-height: 0;
+    position: fixed;
+    border: none;
+    cursor: pointer;
+    font-weight: heavy;
+    font-size: 75px;
+    right: 0; 
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    background: none;
+    margin-top: 595px;
+    margin-right: 255px;
+    transform: rotate(-17deg);
+}
+
+
+.wrapper {
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgb(14, 146, 115);
+    background-repeat:no-repeat;
+    display: block;
+    margin: auto;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 20px;
+    height: 100vh;
+}
+
+.image1 {
+   margin: 0 50px 0 50px;
+    width: 210px;
+    height: 550px;
+}
+.image2 {
+    width: 210px;
+    margin: 0 50px 0 50px;
+    height: 550px;
+}
+
+.options{
+    position: relative;
+    margin-top: 295px;
+    transform: translate(-50%,-50%);
+    font-size: 50px;
+    font-family: "Avenir", sans-serif;
+}
+
+.heading {
+    position: relative;
+    color : #ffffff;
+    font-family: "Avenir", sans-serif;
+    margin-top: 240px;
+    margin-left: 150px;
+    font-size: 57px;
+    line-height: 0px;
+    top: 0;
+    
+}
+.heading1 {
+    color : #ffffff;
+    font-family: "Avenir", sans-serif;
+    line-height: 0px;
+    margin-left: 145px;
+    font-size: 150px;
+   
+}
+.heading2 {
+
+    color : #ffffff;
+    font-family: "Avenir", sans-serif;
+    
+    line-height: 50px;
+   
+    position: relative;
+    margin-left: 145px;
+    font-size: 150px;
+    margin-top: 25px;
+    
+}
+

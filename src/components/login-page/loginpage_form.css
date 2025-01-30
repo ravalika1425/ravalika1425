@@ -1,0 +1,329 @@
+.ascendion_icon {   
+    position: absolute;
+    width: 105px;
+    height: 105px;
+    margin-left: 10px;
+    margin-top: 10px;
+    background: url(/src/assets/asc.jpg) no-repeat;
+    background-size: 105px;
+    border-radius: 50%;
+}
+
+.title {
+    position:relative; 
+    font-weight: bold;
+    /* margin-left: 135px; */
+    /* margin: 0;
+    padding: 0;    */
+    color: #FFFFFF;
+    font-family: "Avenir", sans-serif;
+    flex-grow: 1;
+    /* font-weight: bold; */
+    font-size: 30px;
+    letter-spacing: 0.05em;
+}
+.home {
+    background: url(/src/assets/homedefault.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #FFFFFF;
+    font-family: "Avenir" sans-serif;
+    border-style: none;
+    font-size: 16pt;
+    padding-top: 18px;
+    /* margin-top: 43px; */
+    margin-right: 50px;
+    text-align: center; 
+  }
+  
+  .home:hover {
+    background: url(/src/assets/homehover.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+.signin{
+    width: 35px;
+    height: 35px;
+    /* margin-top: 43px; */
+    background: url(/src/assets/login_default.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 50px;
+    text-align: center; 
+    border-style: none;
+}
+.signin:hover{
+    background: url(/src/assets/login_hover.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-style: none;
+}
+.signout{
+    width: 35px;
+    height: 35px;
+    /* margin-top: 43px; */
+    background: url(/src/assets/register_default.png); 
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center; 
+    border-style: none;
+}
+.signout:hover{
+    background: url(/src/assets/register_hover.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-style: none;
+
+}
+
+
+.welcome{
+    position: relative;
+    top: 100px;
+    padding: 45px;
+    font-family: "Avenir", sans-serif;
+    font-weight: black;
+    font-size: 50px;
+    line-height: 75px;
+    color: #FFFFFF;
+    margin-left: 400px;
+
+}
+
+.progress{
+    margin-left: 400px;
+    padding-top: 24px;
+    color: #FFFFFF;
+    font-family: "Avenir", sans-serif;
+    font-weight: black;
+    font-size: 20pt;
+}
+
+
+.mail{
+    margin-left: 180px;
+    font-family: "Avenir", sans-serif;
+    font-weight: medium;
+    font-size: 16px;
+    line-height: 30px;
+    padding-top: 12px;
+    color: #FFFFFF;
+    margin-right: 70px;
+    /* text-align: left; */
+
+}
+
+.regmail{
+    position: relative;
+    margin-top: 5px;
+    width: 450px;
+    height: 40px;
+    /* text-align: center; */
+    background: #FFFFFF ;
+    border-style: none;
+    margin-left: 430px;
+    padding-left: 15px;
+}
+
+.password{
+    font-family: "Avenir", sans-serif;
+    font-weight: medium;
+    font-size: 16px;
+    line-height: 30px;
+    padding-top: 30px;
+    color: #FFFFFF;
+    margin-left: 55px;
+    /* margin-right: 100px; */
+
+}
+.length{
+    position: relative;
+    margin-top: 5px;
+    width: 450px;
+    height: 40px;
+    /* text-align: center; */
+    background: #FFFFFF ;
+    border-style: none;
+    margin-left: 430px;
+    padding-left: 15px;
+    /* border-radius: 5px; */
+}
+
+.button{
+    /* position:relative; */
+    width: 25px;
+    height: 25px;
+    background: #FFFFFF;
+    margin-top: 20px;
+    border-radius: 3px;
+    margin-left: 65px;
+}
+.sign{
+    position: absolute;
+    width: 375px;
+    height: 40px;
+    left: 655px;
+    top: 510px;
+    background: rgb(232, 45, 45);
+    border-radius: 3px;
+    text-align: center;
+    color: orange;
+    padding-top: 15px;
+    font-family: "Helvetica Neue Light", sans-serif;
+    font-size: 23px;
+}
+
+.button{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    margin-top: 20px;
+    background: #FFFFFF;
+    border-radius: 3px;
+    margin-right: 60px;
+}
+
+.remember{
+    position: relative;
+    width: 300px;
+    font-family: "Avenir", sans-serif;
+    /* font-style: normal; */
+    font-weight: medium;
+    font-size: 16px;
+    padding-left: 10px;
+    line-height: 30px;
+    color: #FFFFFF;
+
+}
+
+.forget {
+    position: relative;
+    left: 165px;
+    font-family: "Avenir", sans-serif;
+    font-size: 16px;
+    line-height: 30px; 
+    margin-top: 0px;
+    font-weight: medium;
+    margin-bottom: 0px;
+    color: #FFFFFF;
+    display: inline-block; 
+    vertical-align: top;
+}
+
+
+
+
+.login{
+    position: relative;
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #b90d63;
+    font-family:"Avenir", sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    margin-top: 30px;
+    border-style: none;
+    margin-left: 380px;
+    padding: 5px; 
+}
+.reghere{
+    position: relative;
+    margin-left: 380px;
+    letter-spacing: 0.005em;
+    color: #FFFFFF;
+    font-family: "Avenir", sans-serif;
+    font-weight: medium;
+    font-size: 16px;
+    margin-top: 30px;
+    /* line-height: 30px; */
+    /* margin-top: 30px; */
+    /* font-size: 16px; */
+}
+.bold{
+    font-family: "Avenir", sans-serif;
+    color: #FFFFFF;
+    font-size: 16px;
+    padding-left: 5px;
+    background: none;
+    border-style: none;
+    text-decoration: underline;
+}
+/* .logos{
+    
+    position: absolute;
+    width: 370px;
+    height: 30px;
+    left: 650px;
+    top: 490px;
+
+}
+
+.insta{
+    position: absolute;
+    width: 100.46px;
+    height: 80.46px;
+    top: 27.77px;
+    background: url(/src/assets/insta.png);
+    background-repeat: no-repeat;
+    background-size: 85px;
+
+}
+
+.google{
+    position: absolute;
+    width: 100.46px;
+    height: 100.46px;
+    left: 180.77px;
+    top: 21.77px;
+    background: url(/src/assets/google.png);
+    background-repeat: no-repeat;
+    background-size: 130px;
+}
+
+.twitter{
+    position: absolute;
+    width: 110.46px;
+    height: 100.46px;
+    left: 270.77px;
+    top: 2.77px;
+    background: url(/src/assets/twitter.png);
+    background-repeat: no-repeat;
+    background-size: 140px;
+}
+
+.facebook{
+    position: absolute;
+    width: 100.46px;
+    height: 80.46px;
+    left: 100.77px;
+    top: 38.77px;
+    background: url(/src/assets/facebook.jpg);
+    background-repeat: no-repeat;
+    background-size: 90px;
+} */
+
+.account{
+    position: absolute;
+    color: rgb(148, 148, 187);
+    top:630px;
+    left:690px;
+    font-size: 18px;
+}
+
+
+.gotolandingpage{
+    position: absolute;
+    height: 50px;
+    color: blue;
+    font-size: 17px;
+    left:1100px;
+    top:650px;
+    
+}
+.link{
+    font-family: "Helvetica Neue Light", sans-serif;
+    color: black;
+    text-decoration: none;
+}
