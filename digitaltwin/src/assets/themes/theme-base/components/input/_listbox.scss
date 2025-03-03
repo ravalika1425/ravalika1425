@@ -1,0 +1,139 @@
+// core
+.play-listbox-list-wrapper {
+    overflow: auto;
+}
+
+.play-listbox-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.play-listbox-item {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.play-listbox-item-group {
+    cursor: auto;
+}
+
+.play-listbox-filter-container {
+    position: relative;
+}
+
+.play-listbox-filter-icon {
+    position: absolute;
+    top: 50%;
+    margin-top: -0.5rem;
+}
+
+.play-listbox-filter {
+    width: 100%;
+}
+
+// theme
+.play-listbox {
+    background: $inputListBg;
+    color: $inputListTextColor;
+    border: $inputListBorder;
+    border-radius: $borderRadius;
+    transition: $formElementTransition;
+    outline-color: transparent;
+
+    .play-listbox-header {
+        padding: $inputListHeaderPadding;
+        border-bottom: $inputListHeaderBorder;
+        color: $inputListHeaderTextColor;
+        background: $inputListHeaderBg;
+        margin: $inputListHeaderMargin;
+        border-top-right-radius: $borderRadius;
+        border-top-left-radius: $borderRadius;
+
+        .play-listbox-filter {
+            padding-right: nth($inputPadding, 2) + $primeIconFontSize;
+        }
+
+        .play-listbox-filter-icon {
+            right: nth($inputPadding, 2);
+            color: $inputIconColor;
+        }
+    }
+
+    .play-listbox-list {
+        padding: $inputListPadding;
+        outline: 0 none;
+
+        .play-listbox-item {
+            margin: $inputListItemMargin;
+            padding: $inputListItemPadding;
+            border: $inputListItemBorder;
+            color: $inputListItemTextColor;
+            transition: $listItemTransition;
+            border-radius: $inputListItemBorderRadius;
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &.play-highlight {
+                color: $highlightTextColor;
+                background: $highlightBg;
+            }
+        }
+
+        .play-listbox-item-group {
+            margin: $submenuHeaderMargin;
+            padding: $submenuHeaderPadding;
+            color: $submenuHeaderTextColor;
+            background: $submenuHeaderBg;
+            font-weight: $submenuHeaderFontWeight;
+        }
+
+        .play-listbox-empty-message {
+            padding: $inputListItemPadding;
+            color: $inputListItemTextColor;
+            background: $inputListItemBg;
+        }
+    }
+
+    &:not(.play-disabled) {
+        .play-listbox-item {
+            &.play-highlight {
+                &.play-focus {
+                    background: $highlightFocusBg;
+                }
+            }
+
+            &:not(.play-highlight):not(.play-disabled) {
+                &.play-focus {
+                    color: $inputListItemTextHoverColor;
+                    background: $inputListItemHoverBg;
+                }
+
+                &:hover {
+                    color: $inputListItemTextHoverColor;
+                    background: $inputListItemHoverBg;
+
+                    &.play-focus {
+                        color: $inputListItemTextHoverColor;
+                        background: $inputListItemHoverBg;
+                    }
+                }
+            }
+        }
+    }
+
+    &.play-focus {
+        @include focused-input();
+    }
+
+    &.play-invalid {
+        @include invalid-input();
+    }
+}

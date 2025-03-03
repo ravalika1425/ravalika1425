@@ -1,0 +1,5 @@
+.play-inputnumber {
+    &.play-invalid.play-component > .play-inputtext {
+        @include invalid-input();
+    }
+}

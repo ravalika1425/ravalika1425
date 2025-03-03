@@ -1,0 +1,7 @@
+.play-tieredmenu {
+    .play-menuitem-link {
+        &:focus {
+            background: $emphasis-lower;
+        }
+    }
+}

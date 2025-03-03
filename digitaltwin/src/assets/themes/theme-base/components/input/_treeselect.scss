@@ -1,0 +1,139 @@
+@use 'sass:math';
+
+.play-treeselect {
+    background: $inputBg;
+    border: $inputBorder;
+    transition: $formElementTransition;
+    border-radius: $borderRadius;
+
+    &:not(.play-disabled):hover {
+        border-color: $inputHoverBorderColor;
+    }
+
+    &:not(.play-disabled).play-focus {
+        @include focused-input();
+    }
+
+    &.play-treeselect-clearable {
+        .play-treeselect-label {
+            padding-right: nth($inputPadding, 2) + $primeIconFontSize;
+        }
+    }
+
+    .play-treeselect-label {
+        padding: $inputPadding;
+        transition: $formElementTransition;
+
+        &.play-placeholder {
+            color: $inputPlaceholderTextColor;
+        }
+    }
+
+    &.play-treeselect-chip {
+        .play-treeselect-token {
+            padding: math.div(nth($inputPadding, 1), 2) nth($inputPadding, 2);
+            margin-right: $inlineSpacing;
+            // background: $chipBg;
+            // color: $chipTextColor;
+            // border-radius: $chipBorderRadius;
+        }
+    }
+
+    .play-treeselect-trigger {
+        background: transparent;
+        color: $inputIconColor;
+        width: $inputGroupAddOnMinWidth;
+        border-top-right-radius: $borderRadius;
+        border-bottom-right-radius: $borderRadius;
+    }
+
+    .play-treeselect-clear-icon {
+        color: $inputIconColor;
+        right: $inputGroupAddOnMinWidth;
+    }
+    
+    &.play-invalid.play-component {
+        @include invalid-input();
+    }
+}
+
+.play-inputwrapper-filled {
+    &.play-treeselect {
+        &.play-treeselect-chip {
+            .play-treeselect-label {
+                padding: math.div(nth($inputPadding, 1), 2) nth($inputPadding, 2);
+            }
+        }
+    }
+}
+
+.play-treeselect-panel {
+    background: $inputOverlayBg;
+    color: $inputListTextColor;
+    border: $inputOverlayBorder;
+    border-radius: $borderRadius;
+    box-shadow: $inputOverlayShadow;
+
+    .play-treeselect-header {
+        padding: $inputListHeaderPadding;
+        border-bottom: $inputListHeaderBorder;
+        color: $inputListHeaderTextColor;
+        background: $inputOverlayHeaderBg;
+        margin: $inputListHeaderMargin;
+        border-top-right-radius: $borderRadius;
+        border-top-left-radius: $borderRadius;
+
+        .play-treeselect-filter-container {
+            margin-right: $inlineSpacing;
+
+            .play-treeselect-filter {
+                padding-right: nth($inputPadding, 2) + $primeIconFontSize;
+            }
+    
+            .play-treeselect-filter-icon {
+                right: nth($inputPadding, 2);
+                color: $inputIconColor;
+            }
+    
+            &.play-treeselect-clearable-filter {
+                .play-treeselect-filter {
+                    padding-right: 2 * (nth($inputPadding, 2) + $primeIconFontSize);
+                }
+        
+                .play-treeselect-filter-clear-icon {
+                    right: (2 * nth($inputPadding, 2)) + $primeIconFontSize;
+                }
+            }
+        }
+
+        .play-treeselect-close {
+            @include action-icon();
+        }
+    }
+
+    .play-treeselect-items-wrapper {
+        .play-tree {
+            border: 0 none;
+        }
+
+        .play-treeselect-empty-message {
+            padding: $inputListItemPadding;
+            color: $inputListItemTextColor;
+            background: $inputListItemBg;
+        }
+    }
+}
+
+.play-input-filled {
+    .play-treeselect {
+        background: $inputFilledBg;
+
+        &:not(.play-disabled):hover {
+            background-color: $inputFilledHoverBg;
+        }
+    
+        &:not(.play-disabled).play-focus {
+            background-color: $inputFilledFocusBg;
+        }
+    }
+}

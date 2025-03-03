@@ -1,0 +1,359 @@
+.play-splitbutton {
+    border-radius: $borderRadius;
+
+    &.play-button-outlined {
+        > .play-button {
+            background-color: transparent;
+            color: $buttonBg;
+            border: $outlinedButtonBorder;
+
+            &:not(:disabled):hover {
+                background: rgba($buttonBg, $textButtonHoverBgOpacity);
+                color: $buttonBg;
+            }
+
+            &:not(:disabled):active {
+                background: rgba($buttonBg, $textButtonActiveBgOpacity);
+                color: $buttonBg;
+            }
+        }
+
+        &.play-button-plain {
+            > .play-button {
+                color: $plainButtonTextColor;
+                border-color: $plainButtonTextColor;
+
+                &:not(:disabled):hover {
+                    background: $plainButtonHoverBgColor;
+                    color: $plainButtonTextColor;
+                }
+        
+                &:not(:disabled):active {
+                    background: $plainButtonActiveBgColor;
+                    color: $plainButtonTextColor;
+                }
+            }
+        }
+    }
+
+    &.play-button-text {
+        > .play-button {
+            background-color: transparent;
+            color: $buttonBg;
+            border-color: transparent;
+
+            &:not(:disabled):hover {
+                background: rgba($buttonBg, $textButtonHoverBgOpacity);
+                color: $buttonBg;
+                border-color: transparent;
+            }
+
+            &:not(:disabled):active {
+                background: rgba($buttonBg, $textButtonActiveBgOpacity);
+                color: $buttonBg;
+                border-color: transparent;
+            }
+        }
+
+        &.play-button-plain {
+            > .play-button {
+                color: $plainButtonTextColor;
+
+                &:not(:disabled):hover {
+                    background: $plainButtonHoverBgColor;
+                    color: $plainButtonTextColor;
+                }
+        
+                &:not(:disabled):active {
+                    background: $plainButtonActiveBgColor;
+                    color: $plainButtonTextColor;
+                }
+            }
+        }
+    }
+
+    &.play-button-raised {
+        box-shadow: $raisedButtonShadow;
+    }
+
+    &.play-button-rounded {
+        border-radius: $roundedButtonBorderRadius;
+
+        > .play-button {
+            border-radius: $roundedButtonBorderRadius;
+        }
+    }
+
+    &.play-button-sm {
+        > .play-button {
+            @include scaledFontSize($fontSize, $scaleSM);
+            @include scaledPadding($buttonPadding, $scaleSM);
+
+            .play-button-icon {
+                @include scaledFontSize($primeIconFontSize, $scaleSM);
+            }
+        }
+    }
+
+    &.play-button-lg {
+        > .play-button {
+            @include scaledFontSize($fontSize, $scaleLG);
+            @include scaledPadding($buttonPadding, $scaleLG);
+
+            &.play-button-icon-only {
+                width: auto;
+            }
+            
+            .play-button-icon {
+                @include scaledFontSize($primeIconFontSize, $scaleLG);
+            }
+        }
+    }
+    
+    .play-splitbutton-menubutton,
+    .play-splitbutton.play-button-rounded > .play-splitbutton-menubutton.play-button,
+    .play-splitbutton.play-button-outlined > .play-splitbutton-menubutton.play-button {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
+
+.play-splitbutton.play-button-secondary {    
+    &.play-button-outlined {
+        > .play-button {
+            background-color: transparent;
+            color: $secondaryButtonBg;
+            border: $outlinedButtonBorder;
+
+            &:not(:disabled):hover {
+                background: rgba($secondaryButtonBg, $textButtonHoverBgOpacity);
+                color: $secondaryButtonBg;
+            }
+
+            &:not(:disabled):active {
+                background: rgba($secondaryButtonBg, $textButtonActiveBgOpacity);
+                color: $secondaryButtonBg;
+            }
+        }
+    }
+
+    &.play-button-text {
+        > .play-button {
+            background-color: transparent;
+            color: $secondaryButtonBg;
+            border-color: transparent;
+
+            &:not(:disabled):hover {
+                background: rgba($secondaryButtonBg, $textButtonHoverBgOpacity);
+                border-color: transparent;
+                color: $secondaryButtonBg;
+            }
+
+            &:not(:disabled):active {
+                background: rgba($secondaryButtonBg, $textButtonActiveBgOpacity);
+                border-color: transparent;
+                color: $secondaryButtonBg;
+            }
+        }
+    }
+}
+
+.play-splitbutton.play-button-info {
+    &.play-button-outlined {
+        > .play-button {
+            background-color: transparent;
+            color: $infoButtonBg;
+            border: $outlinedButtonBorder;
+
+            &:not(:disabled):hover {
+                background: rgba($infoButtonBg, $textButtonHoverBgOpacity);
+                color: $infoButtonBg;
+            }
+
+            &:not(:disabled):active {
+                background: rgba($infoButtonBg, $textButtonActiveBgOpacity);
+                color: $infoButtonBg;
+            }
+        }
+    }
+
+    &.play-button-text {
+        > .play-button {
+            background-color: transparent;
+            color: $infoButtonBg;
+            border-color: transparent;
+
+            &:not(:disabled):hover {
+                background: rgba($infoButtonBg, $textButtonHoverBgOpacity);
+                border-color: transparent;
+                color: $infoButtonBg;
+            }
+
+            &:not(:disabled):active {
+                background: rgba($infoButtonBg, $textButtonActiveBgOpacity);
+                border-color: transparent;
+                color: $infoButtonBg;
+            }
+        }
+    }
+}
+
+.play-splitbutton.play-button-success {
+    &.play-button-outlined {
+        > .play-button {
+            background-color: transparent;
+            color: $successButtonBg;
+            border: $outlinedButtonBorder;
+
+            &:not(:disabled):hover {
+                background: rgba($successButtonBg, $textButtonHoverBgOpacity);
+                color: $successButtonBg;
+            }
+
+            &:not(:disabled):active {
+                background: rgba($successButtonBg, $textButtonActiveBgOpacity);
+                color: $successButtonBg;
+            }
+        }
+    }
+
+    &.play-button-text {
+        > .play-button {
+            background-color: transparent;
+            color: $successButtonBg;
+            border-color: transparent;
+
+            &:not(:disabled):hover {
+                background: rgba($successButtonBg, $textButtonHoverBgOpacity);
+                border-color: transparent;
+                color: $successButtonBg;
+            }
+
+            &:not(:disabled):active {
+                background: rgba($successButtonBg, $textButtonActiveBgOpacity);
+                border-color: transparent;
+                color: $successButtonBg;
+            }
+        }
+    }
+}
+
+.play-splitbutton.play-button-warning {
+    &.play-button-outlined {
+        > .play-button {
+            background-color: transparent;
+            color: $warningButtonBg;
+            border: $outlinedButtonBorder;
+
+            &:not(:disabled):hover {
+                background: rgba($warningButtonBg, $textButtonHoverBgOpacity);
+                color: $warningButtonBg;
+            }
+
+            &:not(:disabled):active {
+                background: rgba($warningButtonBg, $textButtonActiveBgOpacity);
+                color: $warningButtonBg;
+            }
+        }
+    }
+
+    &.play-button-text {
+        > .play-button {
+            background-color: transparent;
+            color: $warningButtonBg;
+            border-color: transparent;
+
+            &:not(:disabled):hover {
+                background: rgba($warningButtonBg, $textButtonHoverBgOpacity);
+                border-color: transparent;
+                color: $warningButtonBg;
+            }
+
+            &:not(:disabled):active {
+                background: rgba($warningButtonBg, $textButtonActiveBgOpacity);
+                border-color: transparent;
+                color: $warningButtonBg;
+            }
+        }
+    }
+}
+
+.play-splitbutton.play-button-help {
+    &.play-button-outlined {
+        > .play-button {
+            background-color: transparent;
+            color: $helpButtonBg;
+            border: $outlinedButtonBorder;
+
+            &:not(:disabled):hover {
+                background: rgba($helpButtonBg, $textButtonHoverBgOpacity);
+                color: $helpButtonBg;
+            }
+
+            &:not(:disabled):active {
+                background: rgba($helpButtonBg, $textButtonActiveBgOpacity);
+                color: $helpButtonBg;
+            }
+        }
+    }
+
+    &.play-button-text {
+        > .play-button {
+            background-color: transparent;
+            color: $helpButtonBg;
+            border-color: transparent;
+
+            &:not(:disabled):hover {
+                background: rgba($helpButtonBg, $textButtonHoverBgOpacity);
+                border-color: transparent;
+                color: $helpButtonBg;
+            }
+
+            &:not(:disabled):active {
+                background: rgba($helpButtonBg, $textButtonActiveBgOpacity);
+                border-color: transparent;
+                color: $helpButtonBg;
+            }
+        }
+    }
+}
+
+.play-splitbutton.play-button-danger {
+    &.play-button-outlined {
+        > .play-button {
+            background-color: transparent;
+            color: $dangerButtonBg;
+            border: $outlinedButtonBorder;
+
+            &:not(:disabled):hover {
+                background: rgba($dangerButtonBg, $textButtonHoverBgOpacity);
+                color: $dangerButtonBg;
+            }
+
+            &:not(:disabled):active {
+                background: rgba($dangerButtonBg, $textButtonActiveBgOpacity);
+                color: $dangerButtonBg;
+            }
+        }
+    }
+
+    &.play-button-text {
+        > .play-button {
+            background-color: transparent;
+            color: $dangerButtonBg;
+            border-color: transparent;
+
+            &:not(:disabled):hover {
+                background: rgba($dangerButtonBg, $textButtonHoverBgOpacity);
+                border-color: transparent;
+                color: $dangerButtonBg;
+            }
+
+            &:not(:disabled):active {
+                background: rgba($dangerButtonBg, $textButtonActiveBgOpacity);
+                border-color: transparent;
+                color: $dangerButtonBg;
+            }
+        }
+    }
+}

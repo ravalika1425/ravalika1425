@@ -1,0 +1,100 @@
+@use 'sass:math';
+
+//core
+.play-inputswitch {
+    position: relative;
+    display: inline-block;
+}
+
+.play-inputswitch-input {
+    appearance: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    z-index: 1;
+    outline: 0 none;
+    cursor: pointer;
+}
+
+.play-inputswitch-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid transparent;
+}
+
+.play-inputswitch-slider:before {
+    position: absolute;
+    content: '';
+    top: 50%;
+}
+
+//theme
+.play-inputswitch {
+    width: $inputSwitchWidth;
+    height: $inputSwitchHeight;
+
+    .play-inputswitch-input {
+        border-radius: $inputSwitchBorderRadius;
+    }
+
+    .play-inputswitch-slider {
+        background: $inputSwitchSliderOffBg;
+        transition: $formElementTransition;
+        border-radius: $inputSwitchBorderRadius;
+        outline-color: transparent;
+
+        &:before {
+            background: $inputSwitchHandleOffBg;
+            width: $inputSwitchHandleWidth;
+            height: $inputSwitchHandleHeight;
+            left: $inputSwitchSliderPadding;
+            margin-top: math.div(-1 * $inputSwitchHandleHeight, 2);
+            border-radius: $inputSwitchHandleBorderRadius;
+            transition-duration: $transitionDuration;
+        }
+    }
+
+    &.play-highlight {
+        .play-inputswitch-slider {
+            background: $inputSwitchSliderOnBg;
+
+            &:before {
+                background: $inputSwitchHandleOnBg;
+                transform: translateX($inputSwitchHandleWidth);
+            }
+        }
+    }
+
+    &:not(.play-disabled) {
+        &:has(.play-inputswitch-input:hover) {
+            .play-inputswitch-slider {
+                background: $inputSwitchSliderOffHoverBg;
+            }
+
+            &.play-highlight {
+                .play-inputswitch-slider {
+                    background: $inputSwitchSliderOnHoverBg;
+                }
+            }
+        }
+
+        &:has(.play-inputswitch-input:focus-visible) {
+            .play-inputswitch-slider {
+                @include focused();
+            }
+        }
+    }
+
+    &.play-invalid > .play-inputswitch-slider {
+        @include invalid-input();
+    }
+}

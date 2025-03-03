@@ -1,0 +1,59 @@
+.play-cascadeselect {
+    .play-cascadeselect-label, .play-dropdown-trigger {
+        background-image: none;
+        background: transparent;
+    }
+
+    .play-cascadeselect-label {
+        border: 0 none;
+    }
+
+    &:not(.play-disabled).play-focus {
+        box-shadow: inset 0 0 0 1px $inputFocusBorderColor,inset 0 0 0 1px $inputFocusBorderColor,inset 0 0 0 1px $inputFocusBorderColor,inset 0 0 0 1px $inputFocusBorderColor;
+    }
+}
+
+.play-cascadeselect-item-content {
+    .play-ink {
+        background-color: rgba($primaryColor, .16);
+    }
+}
+
+.play-input-filled {
+    .play-cascadeselect {
+        @include filled-input-wrapper();
+
+        .play-cascadeselect-label {
+            &:hover {
+                background-image: none;
+                background: transparent;
+            }
+        }
+    }
+
+    .play-float-label {
+        .play-cascadeselect {
+            .play-cascadeselect-label {
+                @include filled-input-float-label();
+            }
+        }
+        
+        .play-inputwrapper-filled {
+            &.play-cascadeselect {
+                .play-cascadeselect-label {
+                    @include filled-input-float-label();
+                }
+            }
+        }
+    }
+
+    .play-cascadeselect.play-invalid {
+        @include invalid-filled-input-wrapper();
+    }
+}
+
+.play-cascadeselect.play-invalid {
+    &:not(.play-disabled).play-focus {
+        box-shadow: inset 0 0 0 1px $inputErrorBorderColor,inset 0 0 0 1px $inputErrorBorderColor,inset 0 0 0 1px $inputErrorBorderColor,inset 0 0 0 1px $inputErrorBorderColor;
+    }
+}

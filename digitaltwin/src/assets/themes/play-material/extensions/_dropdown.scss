@@ -1,0 +1,40 @@
+.play-dropdown {
+    .play-inputtext, .play-dropdown-trigger {
+        background-image: none;
+        background: transparent;
+    }
+
+    .play-inputtext {
+        border: 0 none;
+    }
+
+    &:not(.play-disabled).play-focus {
+        box-shadow: inset 0 0 0 1px $inputFocusBorderColor,inset 0 0 0 1px $inputFocusBorderColor,inset 0 0 0 1px $inputFocusBorderColor,inset 0 0 0 1px $inputFocusBorderColor;
+    }
+}
+
+.play-dropdown-item {
+    .play-ink {
+        background-color: rgba($primaryColor, .16);
+    }
+}
+
+.play-input-filled {
+    .play-dropdown {
+        @include filled-input-wrapper();
+
+        .play-inputtext {
+            border: 0 none;
+        }
+    }
+
+    .play-dropdown.play-invalid {
+        @include invalid-filled-input-wrapper();
+    }
+}
+
+.play-dropdown.play-invalid {
+    &:not(.play-disabled).play-focus {
+        box-shadow: inset 0 0 0 1px $inputErrorBorderColor,inset 0 0 0 1px $inputErrorBorderColor,inset 0 0 0 1px $inputErrorBorderColor,inset 0 0 0 1px $inputErrorBorderColor;
+    }
+}

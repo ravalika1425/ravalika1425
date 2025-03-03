@@ -1,0 +1,170 @@
+//core
+.play-radiobutton {
+    position: relative;
+    display: inline-flex;
+    user-select: none;
+    vertical-align: bottom;
+}
+
+.play-radiobutton-input {
+    cursor: pointer;
+}
+
+.play-radiobutton-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.play-radiobutton-icon {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0) scale(.1);
+    border-radius: 50%;
+    visibility: hidden;
+}
+
+.play-radiobutton.play-highlight .play-radiobutton-icon {
+    transform: translateZ(0) scale(1.0, 1.0);
+    visibility: visible;
+}
+
+//theme
+.play-radiobutton {
+    width: $radiobuttonWidth;
+    height: $radiobuttonHeight;
+
+      .play-radiobutton-input {
+        appearance: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        opacity: 0;
+        z-index: 1;
+        outline: 0 none;
+        border: $radiobuttonBorder;
+        border-radius: 50%;
+    }
+
+    .play-radiobutton-box {
+        border: $radiobuttonBorder;
+        background: $inputBg;
+        width: $radiobuttonWidth;
+        height: $radiobuttonHeight;
+        color: $textColor;
+        border-radius: 50%;
+        transition: $formElementTransition;
+        outline-color: transparent;
+
+        .play-radiobutton-icon {
+            width: $radiobuttonIconSize;
+            height: $radiobuttonIconSize;
+            transition-duration: $transitionDuration;
+            background-color: $radiobuttonIconActiveColor;
+        }
+    }
+
+    &.play-highlight {
+        .play-radiobutton-box {
+            border-color: $radiobuttonActiveBorderColor;
+            background: $radiobuttonActiveBg;
+        }
+    }
+
+    &:not(.play-disabled) {
+        &:has(.play-radiobutton-input:hover) {
+            .play-radiobutton-box {
+                border-color: $inputHoverBorderColor;
+            }
+
+            &.play-highlight {
+                .play-radiobutton-box {
+                    border-color: $radiobuttonActiveHoverBorderColor;
+                    background: $radiobuttonActiveHoverBg;
+
+                    .play-radiobutton-icon {
+                        background-color: $radiobuttonIconActiveHoverColor;
+                    }
+                }
+            }
+        }
+
+        &:has(.play-radiobutton-input:focus-visible) {
+            .play-radiobutton-box {
+                @include focused-input();
+            }
+        }
+    }
+
+    &.play-invalid > .play-radiobutton-box {
+        @include invalid-input();
+    }
+
+    &.play-variant-filled {
+        .play-radiobutton-box {
+            background-color: $inputFilledBg;
+        }
+
+        &.play-highlight {
+            .play-radiobutton-box {
+                background: $radiobuttonActiveBg;
+            }
+        }
+
+        &:not(.play-disabled) {
+            &:has(.play-radiobutton-input:hover) {
+                .play-radiobutton-box {
+                    background-color: $inputFilledHoverBg;
+                }
+
+                &.play-highlight {
+                    .play-radiobutton-box {
+                        background: $radiobuttonActiveHoverBg;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.play-input-filled {
+    .play-radiobutton {
+        .play-radiobutton-box {
+            background-color: $inputFilledBg;
+        }
+
+        &.play-highlight {
+            .play-radiobutton-box {
+                background: $radiobuttonActiveBg;
+            }
+        }
+
+        &:not(.play-disabled) {
+            &:has(.play-radiobutton-input:hover) {
+                .play-radiobutton-box {
+                    background-color: $inputFilledHoverBg;
+                }
+
+                &.play-highlight {
+                    .play-radiobutton-box {
+                        background: $radiobuttonActiveHoverBg;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@if ($highlightBg == $radiobuttonActiveBg) {
+    .play-highlight {
+        .play-radiobutton {
+            .play-radiobutton-box {
+                border-color: $radiobuttonIconActiveColor;
+            }
+        }
+    }
+}

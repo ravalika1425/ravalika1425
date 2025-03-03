@@ -1,0 +1,13 @@
+.play-picklist {
+    .play-picklist-list {
+        .play-picklist-item {
+            &:focus {
+                background: $emphasis-lower;
+
+                &.play-highlight {
+                    background: rgba($primaryColor, .24);
+                }
+            }
+        }
+    }
+}

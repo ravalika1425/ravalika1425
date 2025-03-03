@@ -1,0 +1,30 @@
+.play-tabview {
+    .play-tabview-nav {
+        position: relative;
+
+        li {
+            .play-tabview-nav-link {
+                transition: background-color $transitionDuration;
+                border-radius: 0;
+                
+                > .play-ink {
+                    background-color: rgba($primaryColor, .16);
+                }
+
+                &:focus {
+                    background-color: rgba($primaryColor, .12);
+                }
+            }
+        }
+
+        .play-tabview-ink-bar {
+            z-index: 1;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            height: 2px;
+            background-color: $primaryColor;
+            transition: 500ms cubic-bezier(0.35, 0, 0.25, 1);
+        }
+    }
+}

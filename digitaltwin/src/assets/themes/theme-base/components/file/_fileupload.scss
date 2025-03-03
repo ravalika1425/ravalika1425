@@ -1,0 +1,41 @@
+.play-fileupload {
+    .play-fileupload-buttonbar {
+        background: $panelHeaderBg;
+        padding: $panelHeaderPadding;
+        border: $panelHeaderBorder;
+        color: $panelHeaderTextColor;
+        border-bottom: 0 none;
+        border-top-right-radius: $borderRadius;
+        border-top-left-radius: $borderRadius;
+        gap: $inlineSpacing;
+        
+        .play-button {
+            margin-right: $inlineSpacing;
+        }
+    }
+
+    .play-fileupload-content {
+        background: $panelContentBg;
+        padding: $fileUploadContentPadding;
+        border: $panelContentBorder;
+        color: $panelContentTextColor;
+        border-bottom-right-radius: $borderRadius;
+        border-bottom-left-radius: $borderRadius;
+    }
+
+    .play-progressbar {
+        height: $fileUploadProgressBarHeight;
+    }
+
+    .play-fileupload-row {
+        > div {
+            padding: $tableBodyCellPadding;
+        }
+    }
+
+    &.play-fileupload-advanced {
+        .play-message {
+            margin-top: 0;
+        }
+    }
+}

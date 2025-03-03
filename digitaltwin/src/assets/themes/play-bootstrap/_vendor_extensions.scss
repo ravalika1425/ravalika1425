@@ -1,0 +1,12 @@
+/* Vendor extensions to the designer enhanced bootstrap compatibility */
+@layer primereact {
+    .play-breadcrumb {
+        .play-breadcrumb-chevron {
+            font-family: $fontFamily;
+    
+            &:before {
+                content: '/';
+            }
+        }
+    }
+}

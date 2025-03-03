@@ -1,0 +1,72 @@
+.play-autocomplete {
+    &.play-autocomplete-multiple {
+        .play-autocomplete-multiple-container {
+            &:not(.play-disabled).play-focus {
+                box-shadow: inset 0 0 0 1px $inputFocusBorderColor,inset 0 0 0 1px $inputFocusBorderColor,inset 0 0 0 1px $inputFocusBorderColor,inset 0 0 0 1px $inputFocusBorderColor;
+            }
+        }
+    }
+}
+
+.play-input-filled {
+    .play-autocomplete {
+        &.play-autocomplete-multiple {
+            .play-autocomplete-multiple-container {
+                @include filled-input-wrapper();
+            }
+        }
+    }
+}
+
+.play-float-label {
+    .play-autocomplete-multiple-container {
+        .play-autocomplete-token {
+            padding: .25rem 1rem;
+        }
+    }
+}
+
+.play-input-filled {
+    .play-float-label {
+        .play-autocomplete {
+            .play-autocomplete-multiple-container {
+                .play-autocomplete-token {
+                    padding-top: 0;
+                    padding-bottom: 0;
+
+                    .play-autocomplete-token-icon {
+                        font-size: 75%;
+                    }
+                }
+
+                .play-autocomplete-input-token {
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+    .play-autocomplete.play-invalid {
+        > .play-inputtext {
+            @include invalid-filled-input();
+        }
+
+        > .play-autocomplete-multiple-container {
+            @include invalid-filled-input-wrapper();
+        }
+    }
+}
+
+.play-autocomplete.play-invalid {
+    > .play-inputtext {
+        &:enabled:focus {
+            box-shadow: inset 0 0 0 1px $inputErrorBorderColor,inset 0 0 0 1px $inputErrorBorderColor,inset 0 0 0 1px $inputErrorBorderColor,inset 0 0 0 1px $inputErrorBorderColor;
+        }
+    }
+
+    > .play-autocomplete-multiple-container {
+        &:not(.play-disabled).play-focus {
+            box-shadow: inset 0 0 0 1px $inputErrorBorderColor,inset 0 0 0 1px $inputErrorBorderColor,inset 0 0 0 1px $inputErrorBorderColor,inset 0 0 0 1px $inputErrorBorderColor;
+        }
+    }
+}

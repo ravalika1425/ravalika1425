@@ -1,0 +1,13 @@
+.play-orderlist {
+    .play-orderlist-list {
+        .play-orderlist-item {
+            &:focus {
+                background: $emphasis-lower;
+
+                &.play-highlight {
+                    background: rgba($primaryColor, .24);
+                }
+            }
+        }
+    }
+}

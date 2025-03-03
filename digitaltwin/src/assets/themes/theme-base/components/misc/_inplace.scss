@@ -1,0 +1,17 @@
+.play-inplace {
+    .play-inplace-display {
+        padding: $inplacePadding;
+        border-radius: $borderRadius;
+        transition: $formElementTransition;
+
+        &:not(.play-disabled):hover {
+            background: $inplaceHoverBg;
+            color: $inplaceTextHoverColor;
+        }
+
+        &:focus {
+            @include focused();
+        }
+    }
+}
+

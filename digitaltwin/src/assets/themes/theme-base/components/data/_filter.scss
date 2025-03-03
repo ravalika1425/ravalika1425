@@ -1,0 +1,138 @@
+.play-column-filter-row {
+    .play-column-filter-menu-button,
+    .play-column-filter-clear-button {
+        margin-left: $inlineSpacing;
+    }
+}
+
+.play-column-filter-menu-button {
+    width: $actionIconWidth;
+    height: $actionIconHeight;
+    color: $actionIconColor;
+    border: $actionIconBorder;
+    background: $actionIconBg;
+    border-radius: $actionIconBorderRadius;
+    transition: $actionIconTransition;
+
+    &:hover {
+        color: $actionIconHoverColor;
+        border-color: $actionIconHoverBorderColor;
+        background: $actionIconHoverBg;
+    }
+
+    &.play-column-filter-menu-button-open,
+    &.play-column-filter-menu-button-open:hover {
+        background: $actionIconHoverBg;
+        color: $actionIconHoverColor;
+    }
+
+    &.play-column-filter-menu-button-active,
+    &.play-column-filter-menu-button-active:hover {
+        background: $highlightBg;
+        color: $highlightTextColor;
+    }
+
+    &:focus-visible {
+        @include focused();
+    }
+
+}
+
+.play-column-filter-clear-button {
+    width: $actionIconWidth;
+    height: $actionIconHeight;
+    color: $actionIconColor;
+    border: $actionIconBorder;
+    background: $actionIconBg;
+    border-radius: $actionIconBorderRadius;
+    transition: $actionIconTransition;
+
+    &:hover {
+        color: $actionIconHoverColor;
+        border-color: $actionIconHoverBorderColor;
+        background: $actionIconHoverBg;
+    }
+
+    &:focus-visible {
+        @include focused();
+    }
+}
+
+.play-column-filter-overlay {
+    background: $inputOverlayBg;
+    color: $inputListTextColor;
+    border: $inputOverlayBorder;
+    border-radius: $borderRadius;
+    box-shadow: $inputOverlayShadow;
+    min-width: $menuWidth;
+
+    .play-column-filter-row-items {
+        padding: $inputListPadding;
+
+        .play-column-filter-row-item {
+            margin: $inputListItemMargin;
+            padding: $inputListItemPadding;
+            border: $inputListItemBorder;
+            color: $inputListItemTextColor;
+            background: $inputListItemBg;
+            transition: $listItemTransition;
+            border-radius: $inputListItemBorderRadius;
+
+            &.play-highlight {
+                color: $highlightTextColor;
+                background: $highlightBg;
+            }
+
+            &:not(.play-highlight):not(.play-disabled):hover {
+                color: $inputListItemTextHoverColor;
+                background: $inputListItemHoverBg;
+            }
+
+            &:focus-visible {
+                @include focused-listitem();
+            }
+        }
+
+        .play-column-filter-separator {
+            border-top: $divider;
+            margin: $menuSeparatorMargin;
+        }
+    }
+}
+
+.play-column-filter-overlay-menu {
+    .play-column-filter-operator {
+        padding: $inputListHeaderPadding;
+        border-bottom: $inputListHeaderBorder;
+        color: $inputListHeaderTextColor;
+        background: $inputOverlayHeaderBg;
+        margin: $inputListHeaderMargin;
+        border-top-right-radius: $borderRadius;
+        border-top-left-radius: $borderRadius;
+    }
+
+    .play-column-filter-constraint {
+        padding: $panelContentPadding;
+        border-bottom: $divider;
+
+        .play-column-filter-matchmode-dropdown {
+            margin-bottom: $inlineSpacing;
+        }
+
+        .play-column-filter-remove-button {
+            margin-top: $inlineSpacing;
+        }
+
+        &:last-child {
+            border-bottom: 0 none;
+        }
+    }
+
+    .play-column-filter-add-rule {
+        padding: $panelFooterPadding;
+    }
+
+    .play-column-filter-buttonbar {
+        padding: $panelContentPadding;
+    } 
+}

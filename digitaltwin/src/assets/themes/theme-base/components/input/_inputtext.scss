@@ -1,0 +1,102 @@
+.play-inputtext {
+    font-family: var(--font-family);
+    font-feature-settings: var(--font-feature-settings, normal);
+    font-size: $inputTextFontSize;
+    color: $inputTextColor;
+    background: $inputBg;
+    padding: $inputPadding;
+    border: $inputBorder;
+    transition: $formElementTransition;
+    appearance: none;
+    border-radius: $borderRadius;
+
+    &:enabled:hover {
+        border-color: $inputHoverBorderColor;
+    }
+
+    &:enabled:focus {
+        @include focused-input();
+    }
+
+    &.play-invalid.play-component {
+        @include invalid-input();
+    }
+
+    &.play-inputtext-sm {
+        @include scaledFontSize($inputTextFontSize, $scaleSM);
+        @include scaledPadding($inputPadding, $scaleSM);
+    }
+
+    &.play-inputtext-lg {
+        @include scaledFontSize($inputTextFontSize, $scaleLG);
+        @include scaledPadding($inputPadding, $scaleLG);
+    }
+}
+
+.play-float-label > label {
+    left: nth($inputPadding, 2);
+    color: $inputPlaceholderTextColor;
+    transition-duration: $transitionDuration;
+}
+
+.play-float-label > label.play-error {
+    color: $errorColor;
+}
+
+.play-input-icon-left > i:first-of-type,
+.play-input-icon-left > svg:first-of-type,
+.play-input-icon-left > .play-input-prefix {
+    left: nth($inputPadding, 2);
+    color: $inputIconColor;
+}
+
+.play-input-icon-left > .play-inputtext {
+    padding-left: nth($inputPadding, 2) * 2 + $primeIconFontSize;
+}
+
+.play-input-icon-left.play-float-label > label {
+    left: nth($inputPadding, 2) * 2 + $primeIconFontSize;
+}
+
+.play-input-icon-right > i:last-of-type,
+.play-input-icon-right > svg:last-of-type,
+.play-input-icon-right > .play-input-suffix {
+    right: nth($inputPadding, 2);
+    color: $inputIconColor;
+}
+
+.play-input-icon-right > .play-inputtext {
+    padding-right: nth($inputPadding, 2) * 2 + $primeIconFontSize;
+}
+
+@include placeholder {
+    color: $inputPlaceholderTextColor
+};
+
+.play-input-filled {
+    .play-inputtext {
+        background-color: $inputFilledBg;
+
+        &:enabled:hover {
+            background-color: $inputFilledHoverBg;
+        }
+    
+        &:enabled:focus {
+            background-color: $inputFilledFocusBg;
+        }
+    }
+}
+
+.play-inputtext-sm {
+    .play-inputtext {
+        @include scaledFontSize($inputTextFontSize, $scaleSM);
+        @include scaledPadding($inputPadding, $scaleSM);
+    }
+}
+
+.play-inputtext-lg {
+    .play-inputtext {
+        @include scaledFontSize($inputTextFontSize, $scaleLG);
+        @include scaledPadding($inputPadding, $scaleLG);
+    }
+}

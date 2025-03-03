@@ -1,0 +1,181 @@
+//core
+.play-checkbox {
+    position: relative;
+    display: inline-flex;
+    user-select: none;
+    vertical-align: bottom;
+}
+
+.play-checkbox-input {
+    appearance: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    z-index: 1;
+    outline: 0 none;
+    cursor: pointer;
+}
+
+.play-checkbox-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// theme
+.play-checkbox {
+    width: $checkboxWidth;
+    height: $checkboxHeight;
+
+    .play-checkbox-input {
+        border: $checkboxBorder;
+        border-radius: $borderRadius;
+    }
+
+    .play-checkbox-box {
+        border: $checkboxBorder;
+        background: $inputBg;
+        width: $checkboxWidth;
+        height: $checkboxHeight;
+        color: $textColor;
+        border-radius: $borderRadius;
+        transition: $formElementTransition;
+        outline-color: transparent;
+
+        .play-checkbox-icon {
+            transition-duration: $transitionDuration;
+            color: $checkboxIconActiveColor;
+            font-size: $checkboxIconFontSize;
+
+            &.play-icon {
+                width: $checkboxIconFontSize;
+                height: $checkboxIconFontSize;
+            }
+        }
+    }
+
+    .play-checkbox-box {
+        border: $checkboxBorder;
+        background: $inputBg;
+        width: $checkboxWidth;
+        height: $checkboxHeight;
+        color: $textColor;
+        border-radius: $borderRadius;
+        transition: $formElementTransition;
+        outline-color: transparent;
+
+        .play-checkbox-icon {
+            transition-duration: $transitionDuration;
+            color: $checkboxIconActiveColor;
+            font-size: $checkboxIconFontSize;
+
+            &.play-icon {
+                width: $checkboxIconFontSize;
+                height: $checkboxIconFontSize;
+            }
+        }
+    }
+    
+
+    &.play-highlight {
+        .play-checkbox-box {
+            border-color: $checkboxActiveBorderColor;
+            background: $checkboxActiveBg;
+        }  
+    }
+
+    &:not(.play-disabled) {
+        &:has(.play-checkbox-input:hover) {
+            .play-checkbox-box {
+                border-color: $inputHoverBorderColor;
+            }
+
+            &.play-highlight {
+                .play-checkbox-box {
+                    border-color: $checkboxActiveHoverBorderColor;
+                    background: $checkboxActiveHoverBg;
+                    color: $checkboxIconActiveHoverColor;
+                }
+            }
+        }
+
+        &:has(.play-checkbox-input:focus-visible) {
+            .play-checkbox-box {
+                @include focused-input();
+            }
+        }
+    }
+
+    &.play-invalid > .play-checkbox-box {
+        @include invalid-input();
+    }
+
+    &.play-variant-filled {
+        .play-checkbox-box {
+            background-color: $inputFilledBg;
+        }
+
+        &.play-highlight {
+            .play-checkbox-box {
+                background: $checkboxActiveBg;
+            }
+        }
+
+        &:not(.play-disabled) {
+            &:has(.play-checkbox-input:hover) {
+                .play-checkbox-box {
+                    background-color: $inputFilledHoverBg;
+                }
+    
+                &.play-highlight {
+                    .play-checkbox-box {
+                        background: $checkboxActiveHoverBg;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.play-input-filled {
+    .play-checkbox {
+        .play-checkbox-box {
+            background-color: $inputFilledBg;
+        }
+
+        &.play-highlight {
+            .play-checkbox-box {
+                background: $checkboxActiveBg;
+            }
+        }
+
+        &:not(.play-disabled) {
+            &:has(.play-checkbox-input:hover) {
+                .play-checkbox-box {
+                    background-color: $inputFilledHoverBg;
+                }
+
+                &.play-highlight {
+                    .play-checkbox-box {
+                        background: $checkboxActiveHoverBg;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@if ($highlightBg == $checkboxActiveBg) {
+    .play-highlight {
+        .play-checkbox {
+            .play-checkbox-box {
+                border-color: $checkboxIconActiveColor;
+            }
+        }
+    }
+}

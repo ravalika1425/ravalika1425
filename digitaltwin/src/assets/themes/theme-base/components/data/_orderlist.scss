@@ -1,0 +1,86 @@
+.play-orderlist {
+	.play-orderlist-controls {
+		padding: $panelContentPadding;
+
+		.play-button {
+			margin-bottom: $inlineSpacing;
+		}
+	}
+
+	.play-orderlist-header {
+		background: $panelHeaderBg;
+		color: $panelHeaderTextColor;
+		border: $panelHeaderBorder;
+		padding: $panelHeaderPadding;
+		font-weight: $panelHeaderFontWeight;
+		border-bottom: 0 none;
+		border-top-right-radius: $borderRadius;
+		border-top-left-radius: $borderRadius;
+	}
+
+	.play-orderlist-filter-container {
+		padding: $panelHeaderPadding;
+		background: $panelContentBg;
+		border: $panelHeaderBorder;
+		border-bottom: 0 none;
+
+		.play-orderlist-filter-input {
+			padding-right: nth($inputPadding, 2) + $primeIconFontSize;
+		}
+
+		.play-orderlist-filter-icon {
+			right: nth($inputPadding, 2);
+			color: $inputIconColor;
+		}
+	}
+
+	.play-orderlist-list {
+		border: $panelContentBorder;
+		background: $panelContentBg;
+		color: $panelContentTextColor;
+		padding: $inputListPadding;
+		border-bottom-right-radius: $borderRadius;
+		border-bottom-left-radius: $borderRadius;
+		outline: 0 none;
+
+		.play-orderlist-item {
+			padding: $inputListItemPadding;
+			margin: $inputListItemMargin;
+			border: $inputListItemBorder;
+			color: $inputListItemTextColor;
+			background: $inputListItemBg;
+			transition: transform $transitionDuration, $listItemTransition;
+
+			&:not(.play-highlight):hover {
+				background: $inputListItemHoverBg;
+				color: $inputListItemTextHoverColor;
+			}
+
+			&.play-focus {
+				color: $inputListItemTextFocusColor;
+				background: $inputListItemFocusBg;
+			}
+
+			&.play-highlight {
+				color: $highlightTextColor;
+				background: $highlightBg;
+
+				&.play-focus {
+					background: $highlightFocusBg;
+				}
+			}
+		}
+	}
+
+	&.play-orderlist-striped {
+		.play-orderlist-list {
+			.play-orderlist-item:nth-child(even) {
+				background: $panelContentEvenRowBg;
+
+				&:hover {
+					background: $inputListItemHoverBg;
+				}
+			}
+		}
+	}
+}

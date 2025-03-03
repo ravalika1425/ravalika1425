@@ -1,0 +1,75 @@
+* {
+	box-sizing: border-box;
+}
+
+.play-component {
+    font-family: var(--font-family);
+    font-feature-settings: var(--font-feature-settings, normal);
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+}
+
+.play-component-overlay {
+    background-color: $maskBg;
+    transition-duration: $transitionDuration;
+}
+
+.play-disabled, .play-component:disabled {
+    opacity: $disabledOpacity;
+}
+
+.play-error {
+    color: $errorColor;
+}
+
+.play-text-secondary {
+    color: $textSecondaryColor;
+}
+
+.playi {
+    font-size: $primeIconFontSize;
+}
+
+.play-icon {
+    width: $primeIconFontSize;
+    height: $primeIconFontSize;
+}
+
+.play-link {
+    font-family: var(--font-family);
+    font-feature-settings: var(--font-feature-settings, normal);
+    font-size: $fontSize;
+    border-radius: $borderRadius;
+
+    &:focus-visible {
+        @include focused();
+    }
+}
+
+.play-component-overlay-enter {
+    animation: play-component-overlay-enter-animation 150ms forwards;
+}
+
+.play-component-overlay-leave {
+    animation: play-component-overlay-leave-animation 150ms forwards;
+}
+
+.play-component-overlay {
+    @keyframes play-component-overlay-enter-animation {
+        from {
+            background-color: transparent;
+        }
+        to {
+            background-color: var(--maskbg);
+        }
+    }
+    
+    @keyframes play-component-overlay-leave-animation {
+        from {
+            background-color: var(--maskbg);
+        }
+        to {
+            background-color: transparent;
+        }
+    }
+}

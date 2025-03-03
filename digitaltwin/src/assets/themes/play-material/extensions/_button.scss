@@ -1,0 +1,247 @@
+.play-button {
+    font-weight: 500;
+    min-width: 4rem;
+
+    &.play-button-icon-only {
+        min-width: auto;
+    }
+
+    &:not(:disabled):focus {
+        background: rgba($buttonBg, .76);
+    }
+
+    &:not(:disabled):active {
+        background: rgba($buttonBg, .68);
+    }
+
+    .play-ink {
+        background-color: rgba(255,255,255, .32);
+    }
+
+    &.play-button-text,
+    &.play-button-outlined {
+        &:not(:disabled):focus {
+            background: rgba($buttonBg, .12);
+        }
+
+        &:not(:disabled):active {
+            background: rgba($buttonBg, .16);
+        }
+
+        .play-ink {
+            background-color: rgba($buttonBg, .16);
+        }
+    }
+
+    &.play-button-outlined {
+        box-shadow: inset 0 0 0 1px;
+
+        &:enabled:focus {
+            box-shadow: inset 0 0 0 1px;
+        }
+
+        &:enabled:active {
+            box-shadow: inset 0 0 0 1px;
+        }
+    }
+
+    &:disabled {
+        background-color: $emphasis-lower !important;
+        color: $emphasis-low !important;
+        opacity: 1;
+
+        &.play-button-text {
+            background-color: transparent !important;
+            color: $emphasis-low !important;
+        }
+
+        &.play-button-outlined {
+            background-color: transparent !important;
+            color: $emphasis-low !important;
+            border-color: $emphasis-low !important;
+        }
+    }
+
+    &.play-button-raised {
+        &:not(:disabled):focus {
+            box-shadow: $raisedButtonShadow;
+        }
+    }
+}
+
+.play-button.play-button-secondary, .play-buttonset.play-button-secondary > .play-button, .play-splitbutton.play-button-secondary > .play-button, .play-fileupload-choose.play-button-secondary {
+    &:not(:disabled):focus {
+        background: rgba($secondaryButtonBg, .76);
+    }
+
+    &:not(:disabled):active {
+        background: rgba($secondaryButtonBg, .68);
+    }
+
+    &.play-button-text,
+    &.play-button-outlined {
+        &:not(:disabled):focus {
+            background: rgba($secondaryButtonBg, .12);
+        }
+
+        &:not(:disabled):active {
+            background: rgba($secondaryButtonBg, .16);
+        }
+
+        .play-ink {
+            background-color: rgba($secondaryButtonBg, .16);
+        }
+    }
+}
+
+.play-button.play-button-info, .play-buttonset.play-button-info > .play-button, .play-splitbutton.play-button-info > .play-button, .play-fileupload-choose.play-button-info {
+    &:not(:disabled):focus {
+        background: rgba($infoButtonBg, .76);
+    }
+
+    &:not(:disabled):active {
+        background: rgba($infoButtonBg, .68);
+    }
+
+    &.play-button-text,
+    &.play-button-outlined {
+        &:not(:disabled):focus {
+            background: rgba($infoButtonBg, .12);
+        }
+
+        &:not(:disabled):active {
+            background: rgba($infoButtonBg, .16);
+        }
+
+        .play-ink {
+            background-color: rgba($infoButtonBg, .16);
+        }
+    }
+}
+
+.play-button.play-button-success, .play-buttonset.play-button-success > .play-button, .play-splitbutton.play-button-success > .play-button, .play-fileupload-choose.play-button-success {
+    &:not(:disabled):focus {
+        background: rgba($successButtonBg, .76);
+    }
+
+    &:not(:disabled):active {
+        background: rgba($successButtonBg, .68);
+    }
+
+    &.play-button-text,
+    &.play-button-outlined {
+        &:not(:disabled):focus {
+            background: rgba($successButtonBg, .12);
+        }
+
+        &:not(:disabled):active {
+            background: rgba($successButtonBg, .16);
+        }
+
+        .play-ink {
+            background-color: rgba($successButtonBg, .16);
+        }
+    }
+}
+
+.play-button.play-button-warning, .play-buttonset.play-button-warning > .play-button, .play-splitbutton.play-button-warning > .play-button, .play-fileupload-choose.play-button-warning {
+    &:not(:disabled):focus {
+        background: rgba($warningButtonBg, .76);
+    }
+
+    &:not(:disabled):active {
+        background: rgba($warningButtonBg, .68);
+    }
+
+    &.play-button-text,
+    &.play-button-outlined {
+        &:not(:disabled):focus {
+            background: rgba($warningButtonBg, .12);
+        }
+
+        &:not(:disabled):active {
+            background: rgba($warningButtonBg, .16);
+        }
+
+        .play-ink {
+            background-color: rgba($warningButtonBg, .16);
+        }
+    }
+}
+
+.play-button.play-button-help, .play-buttonset.play-button-help > .play-button, .play-splitbutton.play-button-help > .play-button, .play-fileupload-choose.play-button-help {
+    &:not(:disabled):focus {
+        background: rgba($helpButtonBg, .76);
+    }
+
+    &:not(:disabled):active {
+        background: rgba($helpButtonBg, .68);
+    }
+
+    &.play-button-text,
+    &.play-button-outlined {
+        &:not(:disabled):focus {
+            background: rgba($helpButtonBg, .12);
+        }
+
+        &:not(:disabled):active {
+            background: rgba($helpButtonBg, .16);
+        }
+
+        .play-ink {
+            background-color: rgba($helpButtonBg, .16);
+        }
+    }
+}
+
+.play-button.play-button-danger, .play-buttonset.play-button-danger > .play-button, .play-splitbutton.play-button-danger > .play-button, .play-fileupload-choose.play-button-danger {
+    &:not(:disabled):focus {
+        background: rgba($dangerButtonBg, .76);
+    }
+
+    &:not(:disabled):active {
+        background: rgba($dangerButtonBg, .68);
+    }
+
+    &.play-button-text,
+    &.play-button-outlined {
+        &:not(:disabled):focus {
+            background: rgba($dangerButtonBg, .12);
+        }
+
+        &:not(:disabled):active {
+            background: rgba($dangerButtonBg, .16);
+        }
+
+        .play-ink {
+            background-color: rgba($dangerButtonBg, .16);
+        }
+    }
+}
+
+.play-button.play-button-contrast,
+.play-buttonset.play-button-contrast > .play-button,
+.play-splitbutton.play-button-contrast > .play-button {
+    &:enabled:focus {
+        background: rgba($contrastButtonBg, 0.76);
+    }
+
+    &:enabled:active {
+        background: rgba($contrastButtonBg, 0.68);
+    }
+
+    &.play-button-text,
+    &.play-button-outlined {
+        &:enabled:focus {
+            background: rgba($contrastButtonBg, 0.12);
+        }
+
+        &:enabled:active {
+            background: rgba($contrastButtonBg, 0.16);
+        }
+
+        .play-ink {
+            background-color: rgba($contrastButtonBg, 0.16);
+        }
+    }
+}

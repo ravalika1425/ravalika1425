@@ -1,0 +1,50 @@
+.play-selectbutton {
+    .play-button {
+        background: $toggleButtonBg;
+        border: $toggleButtonBorder;
+        color: $toggleButtonTextColor;
+        transition: $formElementTransition;
+
+        .play-button-icon-left,
+        .play-button-icon-right {
+            color: $toggleButtonIconColor;
+        }
+
+        &:not(.play-disabled):not(.play-highlight):hover {
+            background: $toggleButtonHoverBg;
+            border-color: $toggleButtonHoverBorderColor;
+            color: $toggleButtonTextHoverColor;
+
+            .play-button-icon-left,
+            .play-button-icon-right {
+                color: $toggleButtonIconHoverColor;
+            }
+        }
+
+        &.play-highlight {
+            background: $toggleButtonActiveBg;
+            border-color: $toggleButtonActiveBorderColor;
+            color: $toggleButtonTextActiveColor;
+
+            .play-button-icon-left,
+            .play-button-icon-right {
+                color: $toggleButtonIconActiveColor;
+            }
+
+            &:hover {
+                background: $toggleButtonActiveHoverBg;
+                border-color: $toggleButtonActiveHoverBorderColor;
+                color: $toggleButtonTextActiveHoverColor;
+
+                .play-button-icon-left,
+                .play-button-icon-right {
+                    color: $toggleButtonIconActiveHoverColor;
+                }
+            }
+        }
+    }
+
+    &.play-invalid > .play-button {
+        @include invalid-input();
+    }
+}

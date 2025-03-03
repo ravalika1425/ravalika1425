@@ -1,0 +1,74 @@
+.play-inputgroup-addon {
+    background: $inputGroupBg;
+    color: $inputGroupTextColor;
+    border-top: $inputBorder;
+    border-left: $inputBorder;
+    border-bottom: $inputBorder;
+    padding: $inputPadding;
+    min-width: $inputGroupAddOnMinWidth;
+
+    &:last-child {
+        border-right: $inputBorder;
+    }
+}
+
+.play-inputgroup {
+    > .play-component,
+    > .play-inputwrapper > .play-inputtext,
+    > .play-float-label > .play-component {
+        border-radius: 0;
+        margin: 0;
+
+        + .play-inputgroup-addon {
+            border-left: 0 none;
+        }
+
+        &:focus {
+            z-index: 1;
+
+            ~ label {
+                z-index: 1;
+            }
+        }
+    }
+}
+
+.play-inputgroup-addon:first-child,
+.play-inputgroup button:first-child,
+.play-inputgroup input:first-child,
+.play-inputgroup > .play-inputwrapper:first-child,
+.play-inputgroup > .play-inputwrapper:first-child > .play-inputtext {
+    border-top-left-radius: $borderRadius;
+    border-bottom-left-radius: $borderRadius;
+}
+
+.play-inputgroup .play-float-label:first-child input {
+    border-top-left-radius: $borderRadius;
+    border-bottom-left-radius: $borderRadius;
+}
+
+.play-inputgroup-addon:last-child,
+.play-inputgroup button:last-child,
+.play-inputgroup input:last-child,
+.play-inputgroup > .play-inputwrapper:last-child, 
+.play-inputgroup > .play-inputwrapper:last-child > .play-inputtext {
+    border-top-right-radius: $borderRadius;
+    border-bottom-right-radius: $borderRadius;
+}
+
+.play-inputgroup .play-float-label:last-child input {
+    border-top-right-radius: $borderRadius;
+    border-bottom-right-radius: $borderRadius;
+}
+
+.play-fluid {
+    .play-inputgroup {
+        .play-button {
+            width: auto;
+
+            &.play-button-icon-only {
+                width: $buttonIconOnlyWidth;
+            }
+        }
+    }
+}

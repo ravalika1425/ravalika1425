@@ -1,0 +1,23 @@
+.play-splitter {
+	border: $panelContentBorder;
+	background: $panelContentBg;
+	border-radius: $borderRadius;
+	color: $panelContentTextColor;
+
+	.play-splitter-gutter {
+		transition: $actionIconTransition;
+		background: $splitterGutterBg;
+
+		.play-splitter-gutter-handle {
+			background: $splitterGutterHandleBg;
+
+			&:focus-visible {
+				@include focused();
+			}
+		}
+	}
+
+	.play-splitter-gutter-resizing {
+		background: $splitterGutterHandleBg;
+	}
+}

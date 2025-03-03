@@ -1,0 +1,11 @@
+{
+  "signIn": "Sign In",
+  "emailAddress": "Email Address",
+  "password": "Password",
+  "dontHaveAnAccountSignUp": "Don't have an account? Sign Up",
+  "signUp": "Sign Up",
+  "firstName": "First Name",
+  "lastName": "Last Name",
+  "receiveEmailsLabel": "I want to receive inspiration, marketing promotions, and updates via email.",
+  "alreadyHaveAccountSignIn": "Already have an account? Sign In"
+}

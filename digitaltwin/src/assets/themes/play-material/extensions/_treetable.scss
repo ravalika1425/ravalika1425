@@ -1,0 +1,19 @@
+.play-treetable {
+    .play-sortable-column {
+        outline: 0 none;
+
+        &:focus {
+            background-color: rgba($overlayColor, 0.03);
+        }
+    }
+
+    .play-treetable-tbody {
+        > tr {
+            outline: 0 none;
+
+            &:not(.play-highlight):focus {
+                background-color: rgba($overlayColor, 0.03);                
+            }
+        }
+    }
+}

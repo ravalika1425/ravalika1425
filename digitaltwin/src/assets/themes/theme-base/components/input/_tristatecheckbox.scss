@@ -1,0 +1,46 @@
+//core
+.play-checkbox {
+    position: relative;
+    display: inline-flex;
+    user-select: none;
+    vertical-align: bottom;
+}
+
+.play-checkbox-input {
+    cursor: pointer;
+}
+
+.play-checkbox-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//theme
+.play-tristatecheckbox {
+    &.play-variant-filled {
+        .play-checkbox-box {
+            background-color: $inputFilledBg;
+        }
+
+        &.play-highlight {
+            .play-checkbox-box {
+                background: $checkboxActiveBg;
+            }
+        }
+
+        &:not(.play-disabled) {
+            &:has(.play-checkbox-input:hover) {
+                .play-checkbox-box {
+                    background-color: $inputFilledHoverBg;
+                }
+
+                &.play-highlight {
+                    .play-checkbox-box {
+                        background: $checkboxActiveHoverBg;
+                    }
+                }
+            }
+        }
+    }
+}

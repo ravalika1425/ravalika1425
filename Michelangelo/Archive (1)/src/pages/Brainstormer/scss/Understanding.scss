@@ -1,0 +1,16 @@
+.custom-scroll-settings::-webkit-scrollbar {
+    width: 8px; /* Adjust the width of the scrollbar */
+  }
+
+  .custom-scroll-settings::-webkit-scrollbar-thumb {
+    border-radius: 10px; /* Rounded corners of the scrollbar thumb */
+  }
+
+  .custom-scroll-settings::-webkit-scrollbar-button {
+    display: none; /* Hide the scrollbar buttons */
+  }
+
+  .custom-scroll-settings {
+    scrollbar-width: thin; /* Firefox: make scrollbar thinner */
+    scrollbar-color: #888 #fff; /* Firefox: scrollbar thumb and track colors */
+  }

@@ -1,0 +1,95 @@
+@use 'sass:math';
+
+.play-autocomplete {
+    .play-autocomplete-loader {
+        right: nth($inputPadding, 2); 
+    }
+
+    &.play-autocomplete-dd {
+        .play-autocomplete-loader {
+            right: nth($inputPadding, 2) + $buttonIconOnlyWidth;
+        }
+    }
+    
+    .play-autocomplete-multiple-container {
+        padding: math.div(nth($inputPadding, 1), 2) nth($inputPadding, 2);
+        gap: $inlineSpacing;
+        
+        &:not(.play-disabled):hover {
+            border-color: $inputHoverBorderColor;
+        }
+
+        &:not(.play-disabled).play-focus {
+            @include focused-input();
+        }
+
+        .play-autocomplete-input-token {
+            padding: math.div(nth($inputPadding, 1), 2) 0;
+            
+            input {
+                font-family: var(--font-family);
+                font-feature-settings: var(--font-feature-settings, normal);
+                font-size: $inputTextFontSize;
+                color: $textColor;
+                padding: 0;
+                margin: 0;
+            }
+        }
+
+        .play-autocomplete-token {
+            padding: math.div(nth($inputPadding, 1), 2) nth($inputPadding, 2);
+            margin-right: $inlineSpacing;
+            background: $highlightBg;
+            color: $highlightTextColor;
+            border-radius: $borderRadius;
+
+            .play-autocomplete-token-icon {
+                margin-left: $inlineSpacing;
+            }
+        }
+    }
+
+    &.play-invalid.play-component > .play-inputtext {
+        @include invalid-input();
+    }
+}
+
+.play-autocomplete-panel {
+    background: $inputOverlayBg;
+    color: $inputListTextColor;
+    border: $inputOverlayBorder;
+    border-radius: $borderRadius;
+    box-shadow: $inputOverlayShadow;
+
+    .play-autocomplete-items {
+        padding: $inputListPadding;
+
+        .play-autocomplete-item {
+            margin: $inputListItemMargin;
+            padding: $inputListItemPadding;
+            border: $inputListItemBorder;
+            color: $inputListItemTextColor;
+            background: $inputListItemBg;
+            transition: $listItemTransition;
+            border-radius: $inputListItemBorderRadius;
+
+            &:hover {
+                color: $inputListItemTextHoverColor;
+                background: $inputListItemHoverBg;
+            }
+
+            &.play-highlight {
+                color: $highlightTextColor;
+                background: $highlightBg;
+            }
+        }
+
+        .play-autocomplete-item-group {
+            margin: $submenuHeaderMargin;
+            padding: $submenuHeaderPadding;
+            color: $submenuHeaderTextColor;
+            background: $submenuHeaderBg;
+            font-weight: $submenuHeaderFontWeight;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.play-fieldset {
+    .play-fieldset-legend {
+        border: 0 none;
+    }
+
+    &.play-fieldset-toggleable {
+        .play-fieldset-legend {
+            a {
+                &:focus {
+                    background: $emphasis-lower;
+                }
+            }
+        }
+    }
+}

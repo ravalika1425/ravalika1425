@@ -1,0 +1,40 @@
+.play-float-label input:focus ~ label,
+.play-float-label input.play-filled ~ label,
+.play-float-label textarea:focus ~ label,
+.play-float-label textarea.play-filled ~ label,
+.play-float-label .play-inputwrapper-focus ~ label,
+.play-float-label .play-inputwrapper-filled ~ label {
+    top: -.5rem !important;
+    background-color: $inputBg;
+    padding: 2px 4px;
+    margin-left: -4px;
+    margin-top: 0;
+}
+
+.play-float-label textarea ~ label {
+    margin-top: 0;
+}
+
+.play-float-label input:focus ~ label,
+.play-float-label .play-inputwrapper-focus ~ label {
+    color: $inputFocusBorderColor;
+}
+
+.play-input-filled {
+    .play-float-label {
+        .play-inputtext {
+            @include filled-input-float-label();
+        }
+    
+        input:focus ~ label,
+        input.play-filled ~ label,
+        textarea:focus ~ label,
+        textarea.play-filled ~ label,
+        .play-inputwrapper-focus ~ label,
+        .play-inputwrapper-filled ~ label {
+            top: .25rem !important;
+            margin-top: 0;
+            background: transparent;
+        }
+    }
+}

@@ -1,0 +1,37 @@
+.play-carousel {
+    .play-carousel-content {
+        .play-carousel-prev,
+        .play-carousel-next {
+            @include action-icon();
+            margin: $inlineSpacing;
+        }
+    }
+
+    .play-carousel-indicators {
+        padding: $carouselIndicatorsPadding;
+
+        .play-carousel-indicator {
+            margin-right: $inlineSpacing;
+            margin-bottom: $inlineSpacing;
+           
+            button {
+                background-color: $carouselIndicatorBg;
+                width: $carouselIndicatorWidth;
+                height: $carouselIndicatorHeight;
+                transition: $actionIconTransition;
+                border-radius: $carouselIndicatorBorderRadius;
+
+                &:hover {
+                    background: $carouselIndicatorHoverBg;
+                }
+            }
+
+            &.play-highlight {
+                button {
+                    background: $highlightBg;
+                    color: $highlightTextColor;
+                }
+            }
+        }
+    }
+}

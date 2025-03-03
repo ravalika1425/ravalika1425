@@ -1,0 +1,42 @@
+.play-breadcrumb {
+	background: $breadcrumbBg;
+	border: $breadcrumbBorder;
+	border-radius: $borderRadius;
+	padding: $breadcrumbPadding;
+
+	.play-breadcrumb-list {
+		li {
+			.play-menuitem-link {
+				transition: $listItemTransition;
+				border-radius: $borderRadius;
+
+				&:focus-visible {
+					@include focused();
+				}
+
+				.play-menuitem-text {
+					color: $breadcrumbItemTextColor;
+				}
+
+				.play-menuitem-icon {
+					color: $breadcrumbItemIconColor;
+				}
+			}
+
+			&.play-menuitem-separator {
+				margin: 0 $inlineSpacing 0 $inlineSpacing;
+				color: $breadcrumbSeparatorColor;
+			}
+
+			&:last-child {
+				.play-menuitem-text {
+					color: $breadcrumbLastItemTextColor;
+				}
+
+				.play-menuitem-icon {
+					color: $breadcrumbLastItemIconColor;
+				}
+			}
+		}
+	}
+}

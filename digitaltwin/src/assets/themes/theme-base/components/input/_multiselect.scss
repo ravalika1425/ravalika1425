@@ -1,0 +1,278 @@
+@use "sass:math";
+
+// core
+.play-multiselect {
+    display: inline-flex;
+    cursor: pointer;
+    user-select: none;
+}
+
+.play-multiselect-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.play-multiselect-label-container {
+    overflow: hidden;
+    flex: 1 1 auto;
+    cursor: pointer;
+}
+
+.play-multiselect-label {
+    display: block;
+    white-space: nowrap;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.play-multiselect-label-empty {
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.play-multiselect-token {
+    cursor: default;
+    display: inline-flex;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+.play-multiselect-token-icon {
+    cursor: pointer;
+}
+
+.play-multiselect .play-multiselect-panel {
+    min-width: 100%;
+}
+
+.play-multiselect-items-wrapper {
+    overflow: auto;
+}
+
+.play-multiselect-items {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.play-multiselect-item {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+}
+
+.play-multiselect-item-group {
+    cursor: auto;
+}
+
+.play-multiselect-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.play-multiselect-filter-container {
+    position: relative;
+    flex: 1 1 auto;
+}
+
+.play-multiselect-filter-icon {
+    position: absolute;
+    top: 50%;
+    margin-top: -0.5rem;
+}
+
+.play-multiselect-filter-container .play-inputtext {
+    width: 100%;
+}
+
+.play-multiselect-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+    position: relative;
+    margin-left: auto;
+}
+
+.play-fluid .play-multiselect {
+    display: flex;
+}
+
+// theme
+.play-multiselect {
+    background: $inputBg;
+    border: $inputBorder;
+    transition: $formElementTransition;
+    border-radius: $borderRadius;
+    outline-color: transparent;
+
+    &:not(.play-disabled):hover {
+        border-color: $inputHoverBorderColor;
+    }
+
+    &:not(.play-disabled).play-focus {
+        @include focused-input();
+    }
+
+    &.play-variant-filled {
+        background: $inputFilledBg;
+
+        &:not(.play-disabled):hover {
+            background-color: $inputFilledHoverBg;
+        }
+
+        &:not(.play-disabled).play-focus {
+            background-color: $inputFilledFocusBg;
+        }
+    }
+
+    .play-multiselect-label {
+        padding: $inputPadding;
+        transition: $formElementTransition;
+
+        &.play-placeholder {
+            color: $inputPlaceholderTextColor;
+        }
+    }
+
+    &.play-multiselect-chip {
+        .play-multiselect-token {
+            padding: math.div(nth($inputPadding, 1), 2) nth($inputPadding, 2);
+            margin-right: $inlineSpacing;
+            // background: $chipBg;
+            // color: $chipTextColor;
+            // border-radius: $chipBorderRadius;
+
+            .play-multiselect-token-icon {
+                margin-left: $inlineSpacing;
+            }
+        }
+    }
+
+    .play-multiselect-trigger {
+        background: transparent;
+        color: $inputIconColor;
+        width: $inputGroupAddOnMinWidth;
+        border-top-right-radius: $borderRadius;
+        border-bottom-right-radius: $borderRadius;
+    }
+
+    &.play-invalid.play-component {
+        @include invalid-input();
+    }
+}
+
+.play-inputwrapper-filled {
+    &.play-multiselect {
+        &.play-multiselect-chip {
+            .play-multiselect-label {
+                padding: math.div(nth($inputPadding, 1), 2)
+                    nth($inputPadding, 2);
+            }
+        }
+    }
+}
+
+.play-multiselect-panel {
+    background: $inputOverlayBg;
+    color: $inputListTextColor;
+    border: $inputOverlayBorder;
+    border-radius: $borderRadius;
+    box-shadow: $inputOverlayShadow;
+
+    .play-multiselect-header {
+        padding: $inputListHeaderPadding;
+        border-bottom: $inputListHeaderBorder;
+        color: $inputListHeaderTextColor;
+        background: $inputOverlayHeaderBg;
+        margin: $inputListHeaderMargin;
+        border-top-right-radius: $borderRadius;
+        border-top-left-radius: $borderRadius;
+
+        .play-multiselect-filter-container {
+            .play-inputtext {
+                padding-right: nth($inputPadding, 2) + $primeIconFontSize;
+            }
+
+            .play-multiselect-filter-icon {
+                right: nth($inputPadding, 2);
+                color: $inputIconColor;
+            }
+        }
+
+        .play-checkbox {
+            margin-right: $inlineSpacing;
+        }
+
+        .play-multiselect-close {
+            margin-left: $inlineSpacing;
+            @include action-icon();
+        }
+    }
+
+    .play-multiselect-items {
+        padding: $inputListPadding;
+
+        .play-multiselect-item {
+            margin: $inputListItemMargin;
+            padding: $inputListItemPadding;
+            border: $inputListItemBorder;
+            color: $inputListItemTextColor;
+            background: $inputListItemBg;
+            transition: $listItemTransition;
+            border-radius: $inputListItemBorderRadius;
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &.play-highlight {
+                color: $highlightTextColor;
+                background: $highlightBg;
+
+                &.play-focus {
+                    background: $highlightFocusBg;
+                }
+            }
+
+            &:not(.play-highlight):not(.play-disabled) {
+                &.play-focus {
+                    color: $inputListItemTextHoverColor;
+                    background: $inputListItemHoverBg;
+                }
+            }
+
+            .play-checkbox {
+                margin-right: $inlineSpacing;
+            }
+        }
+
+        .play-multiselect-item-group {
+            margin: $submenuHeaderMargin;
+            padding: $submenuHeaderPadding;
+            color: $submenuHeaderTextColor;
+            background: $submenuHeaderBg;
+            font-weight: $submenuHeaderFontWeight;
+        }
+
+        .play-multiselect-empty-message {
+            padding: $inputListItemPadding;
+            color: $inputListItemTextColor;
+            background: $inputListItemBg;
+        }
+    }
+}
+

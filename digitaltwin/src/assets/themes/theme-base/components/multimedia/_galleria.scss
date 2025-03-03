@@ -1,0 +1,153 @@
+.play-galleria {
+    .play-galleria-close {
+        margin: $galleriaCloseIconMargin;
+        background: $galleriaCloseIconBg;
+        color: $galleriaCloseIconColor;
+        width: $galleriaCloseIconWidth;
+        height: $galleriaCloseIconHeight;
+        transition: $actionIconTransition;
+        border-radius: $galleriaCloseIconBorderRadius;
+
+        .play-galleria-close-icon {
+            font-size: $galleriaCloseIconFontSize;
+
+            &.play-icon {
+                width: $galleriaCloseIconFontSize;
+                height: $galleriaCloseIconFontSize;
+            }
+        }
+
+        &:hover {
+            background: $galleriaCloseIconHoverBg;
+            color: $galleriaCloseIconHoverColor;
+        }
+    }
+
+    .play-galleria-item-nav {
+        background: $galleriaItemNavigatorBg;
+        color: $galleriaItemNavigatorColor;
+        width: $galleriaItemNavigatorWidth;
+        height: $galleriaItemNavigatorHeight;
+        transition: $actionIconTransition;
+        border-radius: $galleriaItemNavigatorBorderRadius;
+        margin: $galleriaItemNavigatorMargin;
+
+        .play-galleria-item-prev-icon,
+        .play-galleria-item-next-icon {
+            font-size: $galleriaItemNavigatorFontSize;
+
+            &.play-icon {
+                width: $galleriaCloseIconFontSize;
+                height: $galleriaCloseIconFontSize;
+            }
+        }
+
+        &:not(.play-disabled) {
+            &:hover {
+                background: $galleriaItemNavigatorHoverBg;
+                color: $galleriaItemNavigatorHoverColor;
+            }
+        }
+    }
+
+    .play-galleria-caption {
+        background: $galleriaCaptionBg;
+        color: $galleriaCaptionTextColor;
+        padding: $galleriaCaptionPadding;
+    }
+
+    .play-galleria-indicators {
+        padding: $galleriaIndicatorsPadding;
+
+        .play-galleria-indicator {
+            button {
+                background-color: $galleriaIndicatorBg;
+                width: $galleriaIndicatorWidth;
+                height: $galleriaIndicatorHeight;
+                transition: $actionIconTransition;
+                border-radius: $galleriaIndicatorBorderRadius;
+
+                &:hover {
+                    background: $galleriaIndicatorHoverBg;
+                }
+            }
+
+            &.play-highlight {
+                button {
+                    background: $highlightBg;
+                    color: $highlightTextColor;
+                }
+            }
+        }
+    }
+
+    &.play-galleria-indicators-bottom,
+    &.play-galleria-indicators-top {
+        .play-galleria-indicator {
+            margin-right: $inlineSpacing;
+        }
+    }
+
+    &.play-galleria-indicators-left,
+    &.play-galleria-indicators-right {
+        .play-galleria-indicator {
+            margin-bottom: $inlineSpacing;
+        }
+    }
+
+    &.play-galleria-indicator-onitem {
+        .play-galleria-indicators {
+            background: $galleriaIndicatorsBgOnItem;
+
+            .play-galleria-indicator {
+                button {
+                    background: $galleriaIndicatorBgOnItem;
+
+                    &:hover {
+                        background: $galleriaIndicatorHoverBgOnItem;
+                    }
+                }
+
+                &.play-highlight {
+                    button {
+                        background: $highlightBg;
+                        color: $highlightTextColor;
+                    }
+                }
+            }
+        }
+    }
+
+    .play-galleria-thumbnail-container {
+        background: $galleriaThumbnailContainerBg;
+        padding: $galleriaThumbnailContainerPadding;
+
+        .play-galleria-thumbnail-prev,
+        .play-galleria-thumbnail-next {
+            margin: $inlineSpacing;
+            background-color: $galleriaThumbnailNavigatorBg;
+            color: $galleriaThumbnailNavigatorColor;
+            width: $galleriaThumbnailNavigatorWidth;
+            height: $galleriaThumbnailNavigatorHeight;
+            transition: $actionIconTransition;
+            border-radius: $galleriaThumbnailNavigatorBorderRadius;
+
+            &:hover {
+                background: $galleriaThumbnailNavigatorHoverBg;
+                color: $galleriaThumbnailNavigatorHoverColor;
+            }
+        }
+
+        .play-galleria-thumbnail-item-content {
+            transition: $listItemTransition;
+            
+            &:focus-visible {
+                @include focused();
+            }
+        }
+    }
+}
+
+.play-galleria-mask {
+    --maskbg: #{$galleriaMaskBg};
+}

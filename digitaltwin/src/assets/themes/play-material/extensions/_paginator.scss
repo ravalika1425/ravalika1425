@@ -1,0 +1,13 @@
+.play-paginator {
+    justify-content: flex-end;
+
+    .play-paginator-element {
+        &:focus {
+            background: $emphasis-lower;
+
+            &.play-highlight {
+                background: rgba($primaryColor, .24);
+            }
+        }
+    }
+}

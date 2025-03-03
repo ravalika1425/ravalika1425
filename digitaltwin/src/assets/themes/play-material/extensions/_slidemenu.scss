@@ -1,0 +1,7 @@
+.play-slidemenu {
+    .play-menuitem-link {
+        &:focus {
+            background: $emphasis-lower;
+        }
+    }
+}

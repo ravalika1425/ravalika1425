@@ -1,0 +1,9 @@
+.play-menubar {
+    .play-menuitem {
+        .play-menuitem-link {
+            &:focus {
+                background: $emphasis-lower;
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+.play-panel {
+    .play-panel-header {
+        border: $panelHeaderBorder;
+        padding: $panelHeaderPadding;
+        background: $panelHeaderBg;
+        color: $panelHeaderTextColor;
+        border-top-right-radius: $borderRadius;
+        border-top-left-radius: $borderRadius;
+
+        .play-panel-title {
+            font-weight: $panelHeaderFontWeight;
+        }
+
+        .play-panel-header-icon {
+            @include action-icon();
+        }
+    }
+
+    &.play-panel-toggleable {
+        .play-panel-header {
+            padding: $panelToggleableHeaderPadding;
+        }
+    }
+
+    .play-panel-content {
+        padding: $panelContentPadding;
+        border: $panelContentBorder;
+        background: $panelContentBg;
+        color: $panelContentTextColor;
+        border-bottom-right-radius: $borderRadius;
+        border-bottom-left-radius: $borderRadius;
+        border-top: 0 none;
+    }
+
+    .play-panel-footer {
+        padding: $panelFooterPadding;
+        border: $panelFooterBorder;
+        background: $panelFooterBg;
+        color: $panelFooterTextColor;
+        border-top: 0 none;
+    }
+}

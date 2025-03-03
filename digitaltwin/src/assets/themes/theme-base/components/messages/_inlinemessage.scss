@@ -1,0 +1,69 @@
+.play-inline-message {
+    padding: $inlineMessagePadding;
+    margin: $inlineMessageMargin;
+    border-radius: $borderRadius;
+
+    &.play-inline-message-info {
+        background: $infoMessageBg;
+        border: $infoMessageBorder;
+        border-width: $inlineMessageBorderWidth;
+        color: $infoMessageTextColor;
+
+        .play-inline-message-icon {
+            color: $infoMessageIconColor;
+        }
+    }
+
+    &.play-inline-message-success {
+        background: $successMessageBg;
+        border: $successMessageBorder;
+        border-width: $inlineMessageBorderWidth;
+        color: $successMessageTextColor;
+
+        .play-inline-message-icon {
+            color: $successMessageIconColor;
+        }
+    }
+
+    &.play-inline-message-warn {
+        background: $warningMessageBg;
+        border: $warningMessageBorder;
+        border-width: $inlineMessageBorderWidth;
+        color: $warningMessageTextColor;
+
+        .play-inline-message-icon {
+            color: $warningMessageIconColor;
+        }
+    }
+
+    &.play-inline-message-error {
+        background: $errorMessageBg;
+        border: $errorMessageBorder;
+        border-width: $inlineMessageBorderWidth;
+        color: $errorMessageTextColor;
+
+        .play-inline-message-icon {
+            color: $errorMessageIconColor;
+        }
+    }
+
+    .play-inline-message-icon {
+        font-size: $inlineMessageIconFontSize;
+        margin-right: $inlineSpacing;
+
+        &.play-icon {
+            width: $inlineMessageIconFontSize;
+            height: $inlineMessageIconFontSize;
+        }
+    }
+
+    .play-inline-message-text {
+        font-size: $inlineMessageTextFontSize;
+    }
+
+    &.play-inline-message-icon-only {
+        .play-inline-message-icon {
+            margin-right: 0;
+        }
+    }
+}

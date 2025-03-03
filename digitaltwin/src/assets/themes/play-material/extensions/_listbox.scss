@@ -1,0 +1,17 @@
+.play-listbox {
+    .play-listbox-list {
+        .play-listbox-item {
+            .play-ink {
+                background-color: rgba($primaryColor, .16);
+            }
+
+            &:focus {
+                background: $emphasis-lower;
+
+                &.play-highlight {
+                    background: rgba($primaryColor, .24);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,118 @@
+.play-accordion {
+    .play-accordion-header {
+        .play-accordion-header-link {
+            padding: $accordionHeaderPadding;
+            border: $accordionHeaderBorder;
+            color: $accordionHeaderTextColor;
+            background: $accordionHeaderBg;
+            font-weight: $accordionHeaderFontWeight;
+            border-radius: $borderRadius;
+            transition: $listItemTransition;
+
+            .play-accordion-toggle-icon {
+                margin-right: $inlineSpacing;
+            }
+        }
+
+        &:not(.play-disabled) {
+            .play-accordion-header-link {
+                &:focus-visible {
+                    @include focused();
+                }
+            }
+        }
+
+        &:not(.play-highlight):not(.play-disabled):hover {
+            .play-accordion-header-link {
+                background: $accordionHeaderHoverBg;
+                border-color: $accordionHeaderHoverBorderColor;
+                color: $accordionHeaderTextHoverColor;
+            }
+        }
+
+        &:not(.play-disabled).play-highlight {
+            .play-accordion-header-link {
+                background: $accordionHeaderActiveBg;
+                border-color: $accordionHeaderActiveBorderColor;
+                color: $accordionHeaderTextActiveColor;
+                border-bottom-right-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+
+            &:hover {
+                .play-accordion-header-link {
+                    border-color: $accordionHeaderActiveHoverBorderColor;
+                    background: $accordionHeaderActiveHoverBg;
+                    color: $accordionHeaderTextActiveHoverColor;
+                }
+            }
+        }
+    }
+
+    .play-accordion-content {
+        padding: $accordionContentPadding;
+        border: $accordionContentBorder;
+        background: $accordionContentBg;
+        color: $accordionContentTextColor;
+        border-top: 0;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: $borderRadius;
+        border-bottom-left-radius: $borderRadius;
+    }
+
+    .play-accordion-tab {
+        margin-bottom: $accordionSpacing;
+
+        @if $accordionSpacing == 0 {
+            .play-accordion-header {
+                .play-accordion-header-link {
+                    border-radius: 0;
+                }
+            }
+
+            .play-accordion-content {
+                border-bottom-right-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+
+            &:not(:first-child) {
+                .play-accordion-header {
+                    .play-accordion-header-link {
+                        border-top: 0 none;
+                    }
+
+                    &:not(.play-highlight):not(.play-disabled):hover,
+                    &:not(.play-disabled).play-highlight:hover {
+                        .play-accordion-header-link {
+                            border-top: 0 none;
+                        }
+                    }
+                }
+            }
+
+            &:first-child {
+                .play-accordion-header {
+                    .play-accordion-header-link {
+                        border-top-right-radius: $borderRadius;
+                        border-top-left-radius: $borderRadius;
+                    }
+                }
+            }
+
+            &:last-child {
+                .play-accordion-header:not(.play-highlight) {
+                    .play-accordion-header-link {
+                        border-bottom-right-radius: $borderRadius;
+                        border-bottom-left-radius: $borderRadius;
+                    }
+
+                    .play-accordion-content {
+                        border-bottom-right-radius: $borderRadius;
+                        border-bottom-left-radius: $borderRadius;
+                    }
+                }
+            }
+        } 
+    }
+}

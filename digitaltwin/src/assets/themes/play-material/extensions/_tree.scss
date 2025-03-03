@@ -1,0 +1,15 @@
+.play-tree {
+    .play-tree-container {
+        .play-treenode {
+            .play-treenode-content {
+                &:focus {
+                    background: $emphasis-lower;
+
+                    &.play-highlight {
+                        background: rgba($primaryColor, .24);
+                    }
+                }
+            }
+        }
+    }
+}

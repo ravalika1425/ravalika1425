@@ -1,0 +1,102 @@
+@use "sass:math";
+
+// core
+.play-chips {
+    display: inline-flex;
+}
+
+.play-chips-multiple-container {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    cursor: text;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.play-chips-token {
+    cursor: default;
+    display: inline-flex;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+.play-chips-input-token {
+    flex: 1 1 auto;
+    display: inline-flex;
+}
+
+.play-chips-token-icon {
+    cursor: pointer;
+}
+
+.play-chips-input-token input {
+    border: 0 none;
+    outline: 0 none;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+    width: 100%;
+}
+
+.play-fluid .play-chips {
+    display: flex;
+}
+
+// theme
+.play-chips {
+    &:not(.play-disabled):hover {
+        .play-chips-multiple-container {
+            border-color: $inputHoverBorderColor;
+        }
+    }
+
+    &:not(.play-disabled).play-focus {
+        .play-chips-multiple-container {
+            @include focused-input();
+        }
+    }
+
+    .play-chips-multiple-container {
+        padding: math.div(nth($inputPadding, 1), 2) nth($inputPadding, 2);
+        outline-color: transparent;
+
+        .play-chips-token {
+            padding: math.div(nth($inputPadding, 1), 2) nth($inputPadding, 2);
+            margin-right: $inlineSpacing;
+            // background: $chipBg;
+            // color: $chipTextColor;
+            // border-radius: $chipBorderRadius;
+
+            &.play-focus {
+                // background: $chipFocusBg;
+                // color: $chipFocusTextColor;
+            }
+
+            .play-chips-token-icon {
+                margin-left: $inlineSpacing;
+            }
+        }
+
+        .play-chips-input-token {
+            padding: math.div(nth($inputPadding, 1), 2) 0;
+
+            input {
+                font-family: var(--font-family);
+                font-feature-settings: var(--font-feature-settings, normal);
+                font-size: $inputTextFontSize;
+                color: $textColor;
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+
+    &.play-invalid.play-component > .play-inputtext {
+        @include invalid-input();
+    }
+}

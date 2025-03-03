@@ -1,0 +1,9 @@
+.play-megamenu {
+    .play-menuitem {
+        .play-menuitem-link {
+            &:focus {
+                background: $emphasis-lower;
+            }
+        }
+    }
+}

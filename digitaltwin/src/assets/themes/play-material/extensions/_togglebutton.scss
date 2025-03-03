@@ -1,0 +1,17 @@
+.play-togglebutton {
+    &:not(.play-disabled) {
+        &:has(.play-togglebutton-input:focus-visible) {
+            .play-button {
+                background: $toggleButtonActiveBg;
+                border-color: $toggleButtonActiveBorderColor;
+            }
+
+            &.play-highlight {
+                .play-button {
+                    background: $toggleButtonActiveHoverBg;
+                    border-color: $toggleButtonActiveHoverBorderColor;
+                }
+            }
+        }
+    }
+}

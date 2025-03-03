@@ -1,0 +1,99 @@
+//core
+.play-togglebutton {
+    position: relative;
+    display: inline-flex;
+    user-select: none;
+    vertical-align: bottom;
+}
+
+.play-togglebutton-input {
+    cursor: pointer;
+}
+
+.play-togglebutton .play-button {
+    flex: 1 1 auto;
+}
+//theme
+.play-togglebutton {
+    .play-togglebutton-input {
+        appearance: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        opacity: 0;
+        z-index: 1;
+        outline: 0 none;
+        border: $toggleButtonBorder;
+        border-radius: $borderRadius;
+    }
+
+    .play-button {
+        background: $toggleButtonBg;
+        border: $toggleButtonBorder;
+        color: $toggleButtonTextColor;
+        transition: $formElementTransition;
+        outline-color: transparent;
+
+        .play-button-icon-left,
+        .play-button-icon-right {
+            color: $toggleButtonIconColor;
+        }
+    }
+
+    &.play-highlight {
+        .play-button {
+            background: $toggleButtonActiveBg;
+            border-color: $toggleButtonActiveBorderColor;
+            color: $toggleButtonTextActiveColor;
+
+            .play-button-icon-left,
+            .play-button-icon-right {
+                color: $toggleButtonIconActiveColor;
+            }
+        }
+    }
+
+    &:not(.play-disabled) {
+        &:has(.play-togglebutton-input:hover) {
+            &:not(.play-highlight) {
+                .play-button {
+                    background: $toggleButtonHoverBg;
+                    border-color: $toggleButtonHoverBorderColor;
+                    color: $toggleButtonTextHoverColor;
+
+                    .play-button-icon-left,
+                    .play-button-icon-right {
+                        color: $toggleButtonIconHoverColor;
+                    }
+                }
+            }
+
+            &.play-highlight {
+                .play-button {
+                    background: $toggleButtonActiveHoverBg;
+                    border-color: $toggleButtonActiveHoverBorderColor;
+                    color: $toggleButtonTextActiveHoverColor;
+
+                    .play-button-icon-left,
+                    .play-button-icon-right {
+                        color: $toggleButtonIconActiveHoverColor;
+                    }
+                }
+            }
+        }
+
+        &:has(.play-togglebutton-input:focus-visible) {
+            .play-button {
+                @include focused-input();
+            }
+        }
+    }
+
+    &.play-invalid > .play-button {
+        @include invalid-input();
+    }
+}

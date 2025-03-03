@@ -1,0 +1,9 @@
+.play-breadcrumb {
+    .play-menuitem-link {
+        &:focus {
+            background: $emphasis-lower;
+        }
+
+        padding: 0.25rem 0.5rem;
+    }
+}

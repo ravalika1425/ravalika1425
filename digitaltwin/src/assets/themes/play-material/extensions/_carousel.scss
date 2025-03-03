@@ -1,0 +1,13 @@
+.play-carousel {
+    .play-carousel-indicators {
+
+        .play-carousel-indicator {
+            &.play-highlight {
+                button {
+                    background: $accentColor;
+                    color: $accentTextColor;
+                }
+            }
+        }
+    }
+}

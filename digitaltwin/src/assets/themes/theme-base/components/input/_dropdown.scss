@@ -1,0 +1,252 @@
+// core
+.play-dropdown {
+    display: inline-flex;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+}
+
+.play-dropdown-clear-icon {
+    position: absolute;
+    top: 50%;
+    margin-top: -0.5rem;
+}
+
+.play-dropdown-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.play-dropdown-label {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    flex: 1 1 auto;
+    width: 1%;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+.play-dropdown-label-empty {
+    overflow: hidden;
+    opacity: 0;
+}
+
+input.play-dropdown-label {
+    cursor: default;
+}
+
+.play-dropdown .play-dropdown-panel {
+    min-width: 100%;
+}
+
+.play-dropdown-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.play-dropdown-items-wrapper {
+    overflow: auto;
+}
+
+.play-dropdown-item {
+    cursor: pointer;
+    font-weight: normal;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.play-dropdown-item-group {
+    cursor: auto;
+}
+
+.play-dropdown-items {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.play-dropdown-filter {
+    width: 100%;
+}
+
+.play-dropdown-filter-container {
+    position: relative;
+}
+
+.play-dropdown-filter-icon {
+    position: absolute;
+    top: 50%;
+    margin-top: -0.5rem;
+}
+
+.play-fluid .play-dropdown {
+    display: flex;
+}
+
+.play-fluid .play-dropdown .play-dropdown-label {
+    width: 1%;
+}
+
+// theme
+.play-dropdown {
+    background: $inputBg;
+    border: $inputBorder;
+    transition: $formElementTransition;
+    border-radius: $borderRadius;
+    outline-color: transparent;
+
+    &:not(.play-disabled):hover {
+        border-color: $inputHoverBorderColor;
+    }
+
+    &:not(.play-disabled).play-focus {
+        @include focused-input();
+    }
+
+    &.play-variant-filled {
+        background: $inputFilledBg;
+
+        &:not(.play-disabled):hover {
+            background-color: $inputFilledHoverBg;
+        }
+
+        &:not(.play-disabled).play-focus {
+            background-color: $inputFilledFocusBg;
+
+            .play-inputtext {
+                background-color: transparent;
+            }
+        }
+    }
+
+    &.play-dropdown-clearable {
+        .play-dropdown-label {
+            padding-right: nth($inputPadding, 2) + $primeIconFontSize;
+        }
+    }
+
+    .play-dropdown-label {
+        background: transparent;
+        border: 0 none;
+
+        &.play-placeholder {
+            color: $inputPlaceholderTextColor;
+        }
+
+        &:focus,
+        &:enabled:focus {
+            outline: 0 none;
+            box-shadow: none;
+        }
+    }
+
+    .play-dropdown-trigger {
+        background: transparent;
+        color: $inputIconColor;
+        width: $inputGroupAddOnMinWidth;
+        border-top-right-radius: $borderRadius;
+        border-bottom-right-radius: $borderRadius;
+    }
+
+    .play-dropdown-clear-icon {
+        color: $inputIconColor;
+        right: $inputGroupAddOnMinWidth;
+    }
+
+    &.play-invalid.play-component {
+        @include invalid-input();
+    }
+}
+
+.play-dropdown-panel {
+    background: $inputOverlayBg;
+    color: $inputListTextColor;
+    border: $inputOverlayBorder;
+    border-radius: $borderRadius;
+    box-shadow: $inputOverlayShadow;
+
+    .play-dropdown-header {
+        padding: $inputListHeaderPadding;
+        border-bottom: $inputListHeaderBorder;
+        color: $inputListHeaderTextColor;
+        background: $inputOverlayHeaderBg;
+        margin: $inputListHeaderMargin;
+        border-top-right-radius: $borderRadius;
+        border-top-left-radius: $borderRadius;
+
+        .play-dropdown-filter {
+            padding-right: nth($inputPadding, 2) + $primeIconFontSize;
+            margin-right: -1 * (nth($inputPadding, 2) + $primeIconFontSize);
+        }
+
+        .play-dropdown-filter-icon {
+            right: nth($inputPadding, 2);
+            color: $inputIconColor;
+        }
+    }
+
+    .play-dropdown-items {
+        padding: $inputListPadding;
+
+        .play-dropdown-item {
+            margin: $inputListItemMargin;
+            padding: $inputListItemPadding;
+            border: $inputListItemBorder;
+            color: $inputListItemTextColor;
+            background: $inputListItemBg;
+            transition: $listItemTransition;
+            border-radius: $inputListItemBorderRadius;
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &.play-highlight {
+                color: $highlightTextColor;
+                background: $highlightBg;
+
+                &.play-focus {
+                    background: $highlightFocusBg;
+                }
+            }
+
+            &:not(.play-highlight):not(.play-disabled) {
+                &.play-focus {
+                    color: $inputListItemTextHoverColor;
+                    background: $inputListItemHoverBg;
+                }
+            }
+
+            .play-dropdown-check-icon {
+                position: relative;
+                margin-left: -1 * $inlineSpacing;
+                margin-right: $inlineSpacing;
+            }
+        }
+
+        .play-dropdown-item-group {
+            margin: $submenuHeaderMargin;
+            padding: $submenuHeaderPadding;
+            color: $submenuHeaderTextColor;
+            background: $submenuHeaderBg;
+            font-weight: $submenuHeaderFontWeight;
+        }
+
+        .play-dropdown-empty-message {
+            padding: $inputListItemPadding;
+            color: $inputListItemTextColor;
+            background: $inputListItemBg;
+        }
+    }
+}

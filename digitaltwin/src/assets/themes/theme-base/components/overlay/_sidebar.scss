@@ -1,0 +1,23 @@
+.play-sidebar {
+    background: $overlayContentBg;
+    color: $panelContentTextColor;
+    border: $overlayContentBorder;
+    box-shadow: $overlayContainerShadow;
+
+    .play-sidebar-header {
+        padding: $panelHeaderPadding;
+
+        .play-sidebar-close,
+        .play-sidebar-icon {
+            @include action-icon();
+        }
+
+        & + .play-sidebar-content {
+            padding-top: 0;
+        }
+    }
+
+    .play-sidebar-content {
+        padding: $panelContentPadding;
+    }
+}

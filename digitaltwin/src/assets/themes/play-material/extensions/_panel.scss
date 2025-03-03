@@ -1,0 +1,24 @@
+.play-panel {
+    border-radius: $borderRadius;
+    box-shadow: $cardShadow;
+
+    .play-panel-header,
+    .play-panel-content,
+    .play-panel-footer {
+        border: 0 none;
+    }
+
+    .play-panel-content {
+        padding-top: 0;
+    }
+
+    .play-panel-title {
+        font-size: 1.25rem;
+    }
+
+    .play-panel-header-icon {
+        &:focus {
+            background: $emphasis-lower;
+        }
+    }
+}

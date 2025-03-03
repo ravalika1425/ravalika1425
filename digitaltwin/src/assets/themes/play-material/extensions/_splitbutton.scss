@@ -1,0 +1,148 @@
+.play-splitbutton {
+    &.play-button-text,
+    &.play-button-outlined {
+        > .play-button {
+            &:not(:disabled):focus {
+                background: rgba($buttonBg, .12);
+            }
+
+            &:not(:disabled):active {
+                background: rgba($buttonBg, .16);
+            }
+        }
+    }
+
+    &.play-button-outlined {
+        > .play-button {
+            box-shadow: inset 0 0 0 1px;
+
+            &:enabled:focus {
+                box-shadow: inset 0 0 0 1px;
+            }
+
+            &:enabled:active {
+                box-shadow: inset 0 0 0 1px;
+            }
+
+            &.play-splitbutton-menubutton {
+                margin-left: -1px;
+                width: calc(#{$buttonIconOnlyWidth} + 1px);
+            }
+        }
+    }
+
+    &.play-disabled {
+        &.play-button-text {
+            > .play-button {
+                background-color: transparent !important;
+                color: $emphasis-low !important;
+            }
+        }
+
+        &.play-button-outlined {
+            > .play-button {
+                background-color: transparent !important;
+                color: $emphasis-low !important;
+                border-color: $emphasis-low !important;
+            }
+        }
+    }
+
+    &.play-button-raised {
+        > .play-button {
+            &:not(:disabled):focus {
+                box-shadow: $raisedButtonShadow;
+            }
+        }
+    }
+}
+
+.play-splitbutton.play-button-secondary {
+    &.play-button-text,
+    &.play-button-outlined {
+        > .play-button {
+            &:not(:disabled):focus {
+                background: rgba($secondaryButtonBg, .12);
+            }
+
+            &:not(:disabled):active {
+                background: rgba($secondaryButtonBg, .16);
+            }
+        }
+    }
+}
+
+.play-splitbutton.play-button-info > .play-button {
+    &.play-button-text,
+    &.play-button-outlined {
+        > .play-button {
+            &:not(:disabled):focus {
+                background: rgba($infoButtonBg, .12);
+            }
+
+            &:not(:disabled):active {
+                background: rgba($infoButtonBg, .16);
+            }
+        }
+    }
+}
+
+.play-splitbutton.play-button-success {
+    &.play-button-text,
+    &.play-button-outlined {
+        > .play-button {
+            &:not(:disabled):focus {
+                background: rgba($successButtonBg, .12);
+            }
+
+            &:not(:disabled):active {
+                background: rgba($successButtonBg, .16);
+            }
+        }
+    }
+}
+
+.play-splitbutton.play-button-warning {
+    &.play-button-text,
+    &.play-button-outlined {
+        > .play-button {
+            &:not(:disabled):focus {
+                background: rgba($warningButtonBg, .12);
+            }
+
+            &:not(:disabled):active {
+                background: rgba($warningButtonBg, .16);
+            }
+        }
+    }
+}
+
+.play-splitbutton.play-button-help {
+    &.play-button-text,
+    &.play-button-outlined {
+        > .play-button {
+            &:not(:disabled):focus {
+                background: rgba($helpButtonBg, .12);
+            }
+
+            &:not(:disabled):active {
+                background: rgba($helpButtonBg, .16);
+            }
+        }
+    }
+}
+
+.play-splitbutton.play-button-danger {
+    &.play-button-text,
+    &.play-button-outlined {
+        > .play-button {
+            &:not(:disabled):focus {
+                background: rgba($dangerButtonBg, .12);
+            }
+
+            &:not(:disabled):active {
+                background: rgba($dangerButtonBg, .16);
+            }
+        }
+    }
+}

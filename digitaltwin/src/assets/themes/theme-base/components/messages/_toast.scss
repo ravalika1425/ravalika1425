@@ -1,0 +1,101 @@
+.play-toast {
+    opacity: $toastOpacity;
+
+    .play-toast-message {
+        margin: $toastMargin;
+        box-shadow: $toastShadow;
+        border-radius: $borderRadius;
+
+        .play-toast-message-content {
+            padding: $toastPadding;
+            border-width: $toastBorderWidth;
+
+            .play-toast-message-text {
+                margin: $toastMessageTextMargin;
+            }
+
+            .play-toast-message-icon {
+                font-size: $toastIconFontSize;
+                
+                &.play-icon {
+                    width: $toastIconFontSize;
+                    height: $toastIconFontSize;
+                }
+            }
+
+
+            .play-toast-summary {
+                font-weight: $toastTitleFontWeight;
+            }
+
+            .play-toast-detail {
+                margin: $toastDetailMargin;
+            }
+        }
+
+        .play-toast-icon-close {
+            width: $toastIconFontSize;
+            height: $toastIconFontSize;
+            border-radius: $actionIconBorderRadius;
+            background: transparent;
+            transition: $actionIconTransition;
+
+            &:hover {
+                background: rgba(255,255,255,.5);
+            }
+
+            &:focus-visible {
+                @include focused();
+            }
+        }
+
+        &.play-toast-message-info {
+            background: $infoMessageBg;
+            border: $infoMessageBorder;
+            border-width: $messageBorderWidth;
+            color: $infoMessageTextColor;
+
+            .play-toast-message-icon,
+            .play-toast-icon-close {
+                color: $infoMessageIconColor;
+            }
+        }
+
+        &.play-toast-message-success {
+            background: $successMessageBg;
+            border: $successMessageBorder;
+            border-width: $messageBorderWidth;
+            color: $successMessageTextColor;
+
+            .play-toast-message-icon,
+            .play-toast-icon-close {
+                color: $successMessageIconColor;
+            }
+        }
+
+        &.play-toast-message-warn {
+            background: $warningMessageBg;
+            border: $warningMessageBorder;
+            border-width: $messageBorderWidth;
+            color: $warningMessageTextColor;
+
+            .play-toast-message-icon,
+            .play-toast-icon-close {
+                color: $warningMessageIconColor;
+            }
+        }
+
+        &.play-toast-message-error {
+            background: $errorMessageBg;
+            border: $errorMessageBorder;
+            border-width: $messageBorderWidth;
+            color: $errorMessageTextColor;
+
+            .play-toast-message-icon,
+            .play-toast-icon-close {
+                color: $errorMessageIconColor;
+            }
+        }
+
+    }
+}

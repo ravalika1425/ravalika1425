@@ -1,0 +1,36 @@
+.play-input-filled {
+    .play-inputgroup {
+        .play-inputgroup-addon {
+            @include filled-input-default();
+
+            &:last-child {
+                border-right-color: transparent;
+            }
+        }
+    }
+
+    .play-inputgroup-addon:first-child,
+    .play-inputgroup button:first-child,
+    .play-inputgroup input:first-child,
+    .play-inputgroup > .play-inputwrapper:first-child,
+    .play-inputgroup > .play-inputwrapper:first-child > .play-inputtext {
+        border-bottom-left-radius: 0;
+    }
+
+    .play-inputgroup .play-float-label:first-child input {
+        border-bottom-left-radius: 0;
+    }
+
+    .play-inputgroup-addon:last-child,
+    .play-inputgroup button:last-child,
+    .play-inputgroup input:last-child,
+    .play-inputgroup > .play-inputwrapper:last-child,
+    .play-inputgroup > .play-inputwrapper:last-child > .play-inputtext {
+        border-bottom-right-radius: 0;
+    }
+
+    .play-inputgroup .play-float-label:last-child input {
+        border-bottom-right-radius: 0;
+    }
+}
+

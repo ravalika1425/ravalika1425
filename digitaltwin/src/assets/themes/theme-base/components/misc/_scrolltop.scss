@@ -1,0 +1,25 @@
+.play-scrolltop {
+    width: $scrollTopWidth;
+    height: $scrollTopHeight;
+    border-radius: $scrollTopBorderRadius;
+    box-shadow: $inputOverlayShadow;
+    transition: $actionIconTransition;
+
+    &.play-link {
+        background: $scrollTopBg;
+
+        &:hover {
+            background: $scrollTopHoverBg;
+        }
+    }
+
+    .play-scrolltop-icon {
+        font-size: $scrollTopFontSize;
+        color: $scrollTopTextColor;
+
+        &.play-icon {
+            width: $scrollTopFontSize;
+            height: $scrollTopFontSize;
+        }
+    }
+}

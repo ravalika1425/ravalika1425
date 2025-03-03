@@ -1,0 +1,277 @@
+.play-treetable {
+    .play-paginator-top {
+        border-width: $tableTopPaginatorBorderWidth;
+        border-radius: 0;
+    }
+
+    .play-paginator-bottom {
+        border-width: $tableBottomPaginatorBorderWidth;
+        border-radius: 0;
+    }
+
+    .play-treetable-header {
+        background: $tableHeaderBg;
+        color: $tableHeaderTextColor;
+        border: $tableHeaderBorder;
+        border-width: $tableHeaderBorderWidth;
+        padding: $tableHeaderPadding;
+        font-weight: $tableHeaderFontWeight;
+    }
+
+    .play-treetable-footer {
+        background: $tableFooterBg;
+        color: $tableFooterTextColor;
+        border: $tableFooterBorder;
+        border-width: $tableFooterBorderWidth;
+        padding: $tableFooterPadding;
+        font-weight: $tableFooterFontWeight;
+    }
+
+    .play-treetable-thead > tr > th {
+        text-align: $tableCellContentAlignment;
+        padding: $tableHeaderCellPadding;
+        border: $tableHeaderCellBorder;
+        border-width: $tableHeaderCellBorderWidth;
+        font-weight: $tableHeaderCellFontWeight;
+        color: $tableHeaderCellTextColor;
+        background: $tableHeaderCellBg;
+        transition: $listItemTransition;
+    }
+
+    .play-treetable-tfoot > tr > td {
+        text-align: $tableCellContentAlignment;
+        padding: $tableFooterCellPadding;
+        border: $tableFooterCellBorder;
+        border-width: $tableFooterCellBorderWidth;
+        font-weight: $tableFooterCellFontWeight;
+        color: $tableFooterCellTextColor;
+        background: $tableFooterCellBg;
+    }
+
+    .play-sortable-column {
+        outline-color: $focusOutlineColor;
+
+        .play-sortable-column-icon {
+            color: $tableHeaderCellIconColor;
+            margin-left: $inlineSpacing;
+        }
+
+        .play-sortable-column-badge {
+            border-radius: 50%;
+            height: $tableSortableColumnBadgeSize;
+            min-width: $tableSortableColumnBadgeSize;
+            line-height: $tableSortableColumnBadgeSize;
+            color: $highlightTextColor;
+            background: $highlightBg;
+            margin-left: $inlineSpacing;
+        }
+
+        &:not(.play-highlight):hover {
+            background: $tableHeaderCellHoverBg;
+            color: $tableHeaderCellTextHoverColor;
+
+            .play-sortable-column-icon {
+                color: $tableHeaderCellIconHoverColor;
+            }
+        }
+
+        &.play-highlight {
+            background: $tableHeaderCellHighlightBg;
+            color: $tableHeaderCellHighlightTextColor;
+
+            .play-sortable-column-icon {
+                color: $tableHeaderCellHighlightTextColor;
+            }
+        }
+    }
+
+    .play-treetable-tbody {
+        > tr {
+            background: $tableBodyRowBg;
+            color: $tableBodyRowTextColor;
+            transition: $listItemTransition;
+
+            > td {
+                text-align: $tableCellContentAlignment;
+                border: $tableBodyCellBorder;
+                border-width: $tableBodyCellBorderWidth;
+                padding: $tableBodyCellPadding;
+
+                .play-treetable-toggler {
+                    @include action-icon();
+                    margin-right: $inlineSpacing;
+                    
+                    & + .play-checkbox {
+                        margin-right: $inlineSpacing;
+                        
+                        .play-indeterminate {
+                            .play-checkbox-icon {
+                                color: $textColor;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &:focus-visible {
+                outline: .15rem solid $focusOutlineColor;
+                outline-offset: -.15rem;
+            }
+
+            &.play-highlight {
+                background: $highlightBg;
+                color: $highlightTextColor;
+
+                .play-treetable-toggler {
+                    color: $highlightTextColor;
+
+                    &:hover {
+                        color: $highlightTextColor;
+                    }
+                    
+                }
+            }
+        }
+    }
+
+    &.play-treetable-selectable,
+    &.play-treetable-hoverable-rows {
+        .play-treetable-tbody > tr:not(.play-highlight):hover {
+            background: $tableBodyRowHoverBg;
+            color: $tableBodyRowTextHoverColor;
+
+            .play-treetable-toggler {
+                color: $tableBodyRowTextHoverColor;
+            }
+        }
+    }
+
+    .play-column-resizer-helper {
+        background: $tableResizerHelperBg;
+    }
+
+    .play-treetable-scrollable-header,
+    .play-treetable-scrollable-footer {
+        background: $panelHeaderBg;
+    }
+
+    .play-treetable-loading-icon {
+        font-size: $loadingIconFontSize;
+
+        &.play-icon {
+            width: $loadingIconFontSize;
+            height: $loadingIconFontSize;
+        }
+    }
+
+    &.play-treetable-gridlines {
+        .play-treetable-header {
+            border-width: 1px 1px 0 1px;
+        }
+
+        .play-treetable-footer {
+            border-width: 0 1px 1px 1px;
+        }
+
+        .play-treetable-top {
+            border-width: 0 1px 0 1px;
+        }
+
+        .play-treetable-bottom {
+            border-width: 0 1px 1px 1px;
+        }
+
+        .play-treetable-thead {
+            > tr {
+                > th {
+                    border-width: 1px;
+                }
+            }
+        }
+
+        .play-treetable-tbody {
+            > tr {
+                > td {
+                    border-width: 1px;
+                }
+            }
+        }
+
+        .play-treetable-tfoot {
+            > tr {
+                > td {
+                    border-width: 1px;
+                }
+            }
+        }
+    }
+
+    &.play-treetable-striped {
+        .play-treetable-tbody {
+            > tr.play-row-odd {
+                background: $tableBodyRowEvenBg;
+    
+                &.play-highlight {
+                    background: $highlightBg;
+                    color: $highlightTextColor;
+    
+                    .play-row-toggler {
+                        color: $highlightTextColor;
+    
+                        &:hover {
+                            color: $highlightTextColor;
+                        }
+                    }
+                }
+
+                & + .play-row-expanded {
+                    background: $tableBodyRowEvenBg;
+                }
+            }
+        }
+    }
+
+    &.play-treetable-sm {
+        .play-treetable-header {
+            @include scaledPadding($tableHeaderPadding, $scaleSM);
+        }
+
+        .play-treetable-thead > tr > th {
+            @include scaledPadding($tableHeaderCellPadding, $tableScaleSM);
+        }
+
+        .play-treetable-tbody > tr > td {
+            @include scaledPadding($tableBodyCellPadding, $tableScaleSM);
+        }
+
+        .play-treetable-tfoot > tr > td {
+            @include scaledPadding($tableFooterPadding, $tableScaleSM);
+        }
+
+        .play-treetable-footer {
+            @include scaledPadding($tableFooterPadding, $tableScaleSM);
+        }
+    }
+
+    &.play-treetable-lg {
+        .play-treetable-header {
+            @include scaledPadding($tableHeaderPadding, $tableScaleLG);
+        }
+
+        .play-treetable-thead > tr > th {
+            @include scaledPadding($tableHeaderCellPadding, $tableScaleLG);
+        }
+
+        .play-treetable-tbody > tr > td {
+            @include scaledPadding($tableBodyCellPadding, $tableScaleLG);
+        }
+
+        .play-treetable-tfoot > tr > td {
+            @include scaledPadding($tableFooterPadding, $tableScaleLG);
+        }
+
+        .play-treetable-footer {
+            @include scaledPadding($tableFooterPadding, $tableScaleLG);
+        }
+    }
+}

@@ -1,0 +1,141 @@
+.play-message {
+    margin: $messageMargin;
+    border-radius: $borderRadius;
+
+    .play-message-wrapper {
+        padding: $messagePadding;
+    }
+
+    .play-message-close {
+        width: $actionIconWidth;
+        height: $actionIconHeight;
+        border-radius: $actionIconBorderRadius;
+        background: transparent;
+        transition: $actionIconTransition;
+
+        &:hover {
+            background: rgba(255,255,255,.5);
+        }
+
+        &:focus-visible {
+            @include focused();
+        }
+    }
+
+    &.play-message-info {
+        background: $infoMessageBg;
+        border: $infoMessageBorder;
+        border-width: $messageBorderWidth;
+        color: $infoMessageTextColor;
+
+        .play-message-icon {
+            color: $infoMessageIconColor;
+        }
+
+        .play-message-close {
+            color: $infoMessageIconColor;
+        }
+    }
+
+    &.play-message-success {
+        background: $successMessageBg;
+        border: $successMessageBorder;
+        border-width: $messageBorderWidth;
+        color: $successMessageTextColor;
+
+        .play-message-icon {
+            color: $successMessageIconColor;
+        }
+
+        .play-message-close {
+            color: $successMessageIconColor;
+        }
+    }
+
+    &.play-message-warn {
+        background: $warningMessageBg;
+        border: $warningMessageBorder;
+        border-width: $messageBorderWidth;
+        color: $warningMessageTextColor;
+
+        .play-message-icon {
+            color: $warningMessageIconColor;
+        }
+
+        .play-message-close {
+            color: $warningMessageIconColor;
+        }
+    }
+
+    &.play-message-error {
+        background: $errorMessageBg;
+        border: $errorMessageBorder;
+        border-width: $messageBorderWidth;
+        color: $errorMessageTextColor;
+
+        .play-message-icon {
+            color: $errorMessageIconColor;
+        }
+
+        .play-message-close {
+            color: $errorMessageIconColor;
+        }
+    }
+
+    .play-message-text {
+        font-size: $messageTextFontSize;
+        font-weight: $messageTextFontWeight;
+    }
+
+    .play-message-icon {
+        font-size: $messageIconFontSize;
+        margin-right: $inlineSpacing;
+
+        &.play-icon {
+            width: $messageIconFontSize;
+            height: $messageIconFontSize;
+        }
+    }
+
+    .play-message-summary {
+        font-weight: 700;
+    }
+
+    .play-message-detail {
+        margin-left: $inlineSpacing;
+    }
+}
+
+
+//Typography
+.Play-typography {
+    &.h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: $successMessageTextColor;
+    }
+  
+    &.h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: $successMessageTextColor;
+    }
+  
+    &.h3 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: $successMessageTextColor;
+    }
+  
+    &.p {
+      font-size: 1rem;
+      color: $successMessageTextColor;
+      
+    }
+  
+    &.span {
+        color: $successMessageTextColor;
+      
+    }
+  }
+  

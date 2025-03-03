@@ -1,0 +1,103 @@
+.play-tree {
+	border: $panelContentBorder;
+	background: $panelContentBg;
+	color: $panelContentTextColor;
+	padding: $panelContentPadding;
+	border-radius: $borderRadius;
+
+	.play-tree-container {
+		.play-treenode {
+			padding: $treeNodePadding;
+			outline: 0 none;
+
+			&:focus > .play-treenode-content {
+				@include focused-listitem();
+			}
+
+			.play-treenode-content {
+				border-radius: $borderRadius;
+				transition: $listItemTransition;
+				padding: $treeNodeContentPadding;
+
+				.play-tree-toggler {
+					margin-right: $inlineSpacing;
+					@include action-icon();
+				}
+
+				.play-treenode-icon {
+					margin-right: $inlineSpacing;
+					color: $treeNodeIconColor;
+				}
+
+				.play-checkbox {
+					margin-right: $inlineSpacing;
+
+					.play-indeterminate {
+						.play-checkbox-icon {
+							color: $textColor;
+						}
+					}
+				}
+
+				&.play-highlight {
+					background: $highlightBg;
+					color: $highlightTextColor;
+
+					.play-tree-toggler,
+					.play-treenode-icon {
+						color: $highlightTextColor;
+
+						&:hover {
+							color: $highlightTextColor;
+						}
+					}
+				}
+
+				&.play-treenode-selectable:not(.play-highlight):hover {
+					background: $inputListItemHoverBg;
+					color: $inputListItemTextHoverColor;
+				}
+
+				&.play-treenode-dragover {
+					background: $inputListItemHoverBg;
+					color: $inputListItemTextHoverColor;
+				}
+			}
+		}
+	}
+
+	.play-tree-filter-container {
+		margin-bottom: $inlineSpacing;
+
+		.play-tree-filter {
+			width: 100%;
+			padding-right: nth($inputPadding, 2) + $primeIconFontSize;
+		}
+
+		.play-tree-filter-icon {
+			right: nth($inputPadding, 2);
+			color: $inputIconColor;
+		}
+	}
+
+	.play-treenode-children {
+		padding: $treeNodeChildrenPadding;
+	}
+
+	.play-tree-loading-icon {
+		font-size: $loadingIconFontSize;
+
+		&.play-icon {
+			width: $loadingIconFontSize;
+			height: $loadingIconFontSize;
+		}
+	}
+
+	.play-treenode-droppoint {
+		height: $inlineSpacing;
+
+		&.play-treenode-droppoint-active {
+			background: scale-color($highlightBg, $lightness: -20%);
+		}
+	}
+}

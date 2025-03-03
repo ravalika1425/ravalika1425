@@ -1,0 +1,103 @@
+.play-cascadeselect {
+    background: $inputBg;
+    border: $inputBorder;
+    transition: $formElementTransition;
+    border-radius: $borderRadius;
+
+    &:not(.play-disabled):hover {
+        border-color: $inputHoverBorderColor;
+    }
+
+    &:not(.play-disabled).play-focus {
+        @include focused-input();
+    }
+
+    .play-cascadeselect-label {
+        background: transparent;
+        border: 0 none;
+        padding: $inputPadding;
+
+        &.play-placeholder {
+            color: $inputPlaceholderTextColor;
+        }
+
+        &:enabled:focus {
+            outline: 0 none;
+            box-shadow: none;
+        }
+    }
+
+    .play-cascadeselect-trigger {
+        background: transparent;
+        color: $inputIconColor;
+        width: $inputGroupAddOnMinWidth;
+        border-top-right-radius: $borderRadius;
+        border-bottom-right-radius: $borderRadius;
+    }
+
+    &.play-invalid.play-component {
+        @include invalid-input();
+    }
+}
+
+.play-cascadeselect-panel {
+    background: $inputOverlayBg;
+    color: $inputListTextColor;
+    border: $inputOverlayBorder;
+    border-radius: $borderRadius;
+    box-shadow: $inputOverlayShadow;
+
+    .play-cascadeselect-items {
+        padding: $inputListPadding;
+
+        .play-cascadeselect-item {
+            margin: $inputListItemMargin;
+            border: $inputListItemBorder;
+            color: $inputListItemTextColor;
+            background: $inputListItemBg;
+            transition: $listItemTransition;
+            border-radius: $inputListItemBorderRadius;
+
+            .play-cascadeselect-item-content {
+                padding: $inputListItemPadding;
+
+                &:focus {
+                    @include focused-listitem();
+                }
+            }
+
+            &.play-highlight {
+                color: $highlightTextColor;
+                background: $highlightBg;
+            }
+
+            &:not(.play-highlight):not(.play-disabled):hover {
+                color: $inputListItemTextHoverColor;
+                background: $inputListItemHoverBg;
+            }
+
+            .play-cascadeselect-group-icon {
+                font-size: $menuitemSubmenuIconFontSize;
+
+                &.play-icon {
+                    width: $menuitemSubmenuIconFontSize;
+                    height: $menuitemSubmenuIconFontSize;
+                }
+            }
+        }
+    }
+}
+
+.play-input-filled {
+    .play-cascadeselect {
+        background: $inputFilledBg;
+
+        &:not(.play-disabled):hover {
+            background-color: $inputFilledHoverBg;
+        }
+    
+        &:not(.play-disabled).play-focus {
+            background-color: $inputFilledFocusBg;
+        }
+    }
+}

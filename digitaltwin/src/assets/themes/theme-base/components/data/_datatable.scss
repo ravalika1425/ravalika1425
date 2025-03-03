@@ -1,0 +1,389 @@
+.play-datatable {
+    .play-paginator-top {
+        border-width: $tableTopPaginatorBorderWidth;
+        border-radius: 0;
+    }
+
+    .play-paginator-bottom {
+        border-width: $tableBottomPaginatorBorderWidth;
+        border-radius: 0;
+    }
+
+    .play-datatable-header {
+        background: $tableHeaderBg;
+        color: $tableHeaderTextColor;
+        border: $tableHeaderBorder;
+        border-width: $tableHeaderBorderWidth;
+        padding: $tableHeaderPadding;
+        font-weight: $tableHeaderFontWeight;
+    }
+
+    .play-datatable-footer {
+        background: $tableFooterBg;
+        color: $tableFooterTextColor;
+        border: $tableFooterBorder;
+        border-width: $tableFooterBorderWidth;
+        padding: $tableFooterPadding;
+        font-weight: $tableFooterFontWeight;
+    }
+
+    .play-datatable-thead > tr > th {
+        text-align: $tableCellContentAlignment;
+        padding: $tableHeaderCellPadding;
+        border: $tableHeaderCellBorder;
+        border-width: $tableHeaderCellBorderWidth;
+        font-weight: $tableHeaderCellFontWeight;
+        color: $tableHeaderCellTextColor;
+        background: $tableHeaderCellBg;
+        transition: $listItemTransition;
+    }
+
+    .play-datatable-tfoot > tr > td {
+        text-align: $tableCellContentAlignment;
+        padding: $tableFooterCellPadding;
+        border: $tableFooterCellBorder;
+        border-width: $tableFooterCellBorderWidth;
+        font-weight: $tableFooterCellFontWeight;
+        color: $tableFooterCellTextColor;
+        background: $tableFooterCellBg;
+    }
+
+    .play-sortable-column {
+        .play-sortable-column-icon {
+            color: $tableHeaderCellIconColor;
+            margin-left: $inlineSpacing;
+        }
+
+        .play-sortable-column-badge {
+            border-radius: 50%;
+            height: $tableSortableColumnBadgeSize;
+            min-width: $tableSortableColumnBadgeSize;
+            line-height: $tableSortableColumnBadgeSize;
+            color: $highlightTextColor;
+            background: $highlightBg;
+            margin-left: $inlineSpacing;
+        }
+
+        &:not(.play-highlight):not(.play-sortable-disabled):hover {
+            background: $tableHeaderCellHoverBg;
+            color: $tableHeaderCellTextHoverColor;
+
+            .play-sortable-column-icon {
+                color: $tableHeaderCellIconHoverColor;
+            }
+        }
+
+        &.play-highlight {
+            background: $tableHeaderCellHighlightBg;
+            color: $tableHeaderCellHighlightTextColor;
+
+            .play-sortable-column-icon {
+                color: $tableHeaderCellHighlightTextColor;
+            }
+
+            &:not(.play-sortable-disabled):hover {
+                background: $tableHeaderCellHighlightHoverBg;
+                color: $tableHeaderCellHighlightTextColor;
+    
+                .play-sortable-column-icon {
+                    color: $tableHeaderCellHighlightTextColor;
+                }
+            }
+        }
+
+        &:focus-visible {
+            box-shadow: $inputListItemFocusShadow;
+            outline: 0 none;
+        }
+    }
+
+    .play-datatable-tbody {
+        > tr {
+            background: $tableBodyRowBg;
+            color: $tableBodyRowTextColor;
+            transition: $listItemTransition;
+
+            > td {
+                text-align: $tableCellContentAlignment;
+                border: $tableBodyCellBorder;
+                border-width: $tableBodyCellBorderWidth;
+                padding: $tableBodyCellPadding;
+
+                .play-row-toggler,
+                .play-row-editor-init,
+                .play-row-editor-save,
+                .play-row-editor-cancel {
+                    @include action-icon();
+                }
+
+                .play-row-editor-save {
+                    margin-right: $inlineSpacing;
+                }
+
+                > .play-column-title {
+                    font-weight: $tableHeaderCellFontWeight;
+                }
+
+                &.play-highlight {
+                    background: $highlightBg;
+                    color: $highlightTextColor;
+                }
+            }
+
+            &.play-highlight {
+                background: $highlightBg;
+                color: $highlightTextColor;
+            }
+
+            &.play-highlight-contextmenu {
+                outline: 0.15rem solid $focusOutlineColor;
+                outline-offset: -0.15rem;
+            }
+
+            &.play-datatable-dragpoint-top > td {
+                box-shadow: inset 0 2px 0 0 $highlightBg;
+            }
+
+            &.play-datatable-dragpoint-bottom > td {
+                box-shadow: inset 0 -2px 0 0 $highlightBg;
+            }
+        }
+    }
+
+    &.play-datatable-selectable {
+        .play-datatable-tbody > tr.play-selectable-row {
+            &:not(.play-highlight):not(.play-datatable-emptymessage):hover {
+                background: $tableBodyRowHoverBg;
+                color: $tableBodyRowTextHoverColor;
+            }
+
+            &:focus-visible {
+                outline: .15rem solid $focusOutlineColor;
+                outline-offset: -.15rem;
+            }
+        }
+    }
+
+    &.play-datatable-selectable-cell {
+        .play-datatable-tbody > tr.play-selectable-row {
+            & > td.play-selectable-cell {
+                &:not(.play-highlight):hover {
+                    background: $tableBodyRowHoverBg;
+                    color: $tableBodyRowTextHoverColor;
+                }
+
+                &:focus-visible {
+                    outline: .15rem solid $focusOutlineColor;
+                    outline-offset: -.15rem;
+                }
+            }
+        }
+    }
+
+    &.play-datatable-hoverable-rows {
+        .play-datatable-tbody > tr:not(.play-highlight):not(.play-datatable-emptymessage):hover {
+            background: $tableBodyRowHoverBg;
+            color: $tableBodyRowTextHoverColor;
+        }
+    }
+
+    .play-column-resizer-helper {
+        background: $tableResizerHelperBg;
+    }
+
+    .play-datatable-scrollable-header,
+    .play-datatable-scrollable-footer {
+        background: $panelHeaderBg;
+    }
+
+    &.play-datatable-scrollable > .play-datatable-wrapper > .play-datatable-table,
+    &.play-datatable-scrollable > .play-datatable-wrapper > .play-virtualscroller > .play-datatable-table {
+        > .play-datatable-thead,
+        > .play-datatable-tfoot {
+            background-color: $tableHeaderCellBg;
+        }
+    }
+
+    .play-datatable-loading-icon {
+        font-size: $loadingIconFontSize;
+        &.play-icon {
+            width: $loadingIconFontSize;
+            height: $loadingIconFontSize;
+        }
+    }
+
+    &.play-datatable-gridlines {
+        .play-datatable-header {
+            border-width: 1px 1px 0 1px;
+        }
+
+        .play-datatable-footer {
+            border-width: 0 1px 1px 1px;
+        }
+
+        .play-paginator-top {
+            border-width: 0 1px 0 1px;
+        }
+
+        .play-paginator-bottom {
+            border-width: 0 1px 1px 1px;
+        }
+
+        .play-datatable-thead {
+            > tr {
+                > th {
+                    border-width: 1px 0 1px 1px;
+
+                    &:last-child {
+                        border-width: 1px;
+                    }
+                }
+            }
+        }
+
+        .play-datatable-tbody {
+            > tr {
+                > td {
+                    border-width: 1px 0 0 1px;
+
+                    &:last-child {
+                        border-width: 1px 1px 0 1px;
+                    }
+                }
+
+                &:last-child {
+                    > td {
+                        border-width: 1px 0 1px 1px;
+
+                        &:last-child {
+                            border-width: 1px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .play-datatable-tfoot {
+            > tr {
+                > td {
+                    border-width: 1px 0 1px 1px;
+
+                    &:last-child {
+                        border-width: 1px 1px 1px 1px;
+                    }
+                }
+            }
+        }
+
+        .play-datatable-thead + .play-datatable-tfoot {
+            > tr {
+                > td {
+                    border-width: 0 0 1px 1px;
+
+                    &:last-child {
+                        border-width: 0 1px 1px 1px;
+                    }
+                }
+            }
+        }
+
+        &:has(.play-datatable-thead):has(.play-datatable-tbody) .play-datatable-tbody {
+            > tr {
+                > td {
+                    border-width: 0 0 1px 1px;
+
+                    &:last-child {
+                        border-width: 0 1px 1px 1px;
+                    }
+                }
+            }
+        }
+
+        &:has(.play-datatable-tbody):has(.play-datatable-tfoot) .play-datatable-tbody {
+            > tr {
+                &:last-child {
+                    > td {
+                        border-width: 0 0 0 1px;
+
+                        &:last-child {
+                            border-width: 0 1px 0 1px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.play-datatable-striped {
+        .play-datatable-tbody {
+            > tr.play-row-odd {
+                background: $tableBodyRowEvenBg;
+    
+                &.play-highlight {
+                    background: $highlightBg;
+                    color: $highlightTextColor;
+    
+                    .play-row-toggler {
+                        color: $highlightTextColor;
+    
+                        &:hover {
+                            color: $highlightTextColor;
+                        }
+                    }
+                }
+
+                & + .play-row-expanded {
+                    background: $tableBodyRowEvenBg;
+                }
+            }
+        }
+    }
+
+    &.play-datatable-sm {
+        .play-datatable-header {
+            @include scaledPadding($tableHeaderPadding, $tableScaleSM);
+        }
+
+        .play-datatable-thead > tr > th {
+            @include scaledPadding($tableHeaderCellPadding, $tableScaleSM);
+        }
+
+        .play-datatable-tbody > tr > td {
+            @include scaledPadding($tableBodyCellPadding, $tableScaleSM);
+        }
+
+        .play-datatable-tfoot > tr > td {
+            @include scaledPadding($tableFooterPadding, $tableScaleSM);
+        }
+
+        .play-datatable-footer {
+            @include scaledPadding($tableFooterPadding, $tableScaleSM);
+        }
+    }
+
+    &.play-datatable-lg {
+        .play-datatable-header {
+            @include scaledPadding($tableHeaderPadding, $tableScaleLG);
+        }
+
+        .play-datatable-thead > tr > th {
+            @include scaledPadding($tableHeaderCellPadding, $tableScaleLG);
+        }
+
+        .play-datatable-tbody > tr > td {
+            @include scaledPadding($tableBodyCellPadding, $tableScaleLG);
+        }
+
+        .play-datatable-tfoot > tr > td {
+            @include scaledPadding($tableFooterPadding, $tableScaleLG);
+        }
+
+        .play-datatable-footer {
+            @include scaledPadding($tableFooterPadding, $tableScaleLG);
+        }
+    }
+}
+
+.play-datatable-drag-selection-helper {
+    background: $tableDragHelperBg;
+}

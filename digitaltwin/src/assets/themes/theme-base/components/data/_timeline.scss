@@ -1,0 +1,38 @@
+.play-timeline {
+    .play-timeline-event-marker {
+        border: $timelineEventMarkerBorder; 
+        border-radius: $timelineEventMarkerBorderRadius;
+        width: $timelineEventMarkerWidth;
+        height: $timelineEventMarkerHeight;
+        background-color: $timelineEventMarkerBackground;
+    }
+
+    .play-timeline-event-connector {
+        background-color: $timelineEventColor;
+    }
+
+    &.play-timeline-vertical {
+        .play-timeline-event-opposite,
+        .play-timeline-event-content  {
+            padding: $timelineVerticalEventContentPadding;
+        }
+
+        .play-timeline-event-connector {
+            width: $timelineEventConnectorSize;
+        }
+    }
+
+    &.play-timeline-horizontal {
+        .play-timeline-event-opposite,
+        .play-timeline-event-content  {
+            padding: $timelineHorizontalEventContentPadding;
+        }
+
+        .play-timeline-event-connector {
+            height: $timelineEventConnectorSize;
+        }
+    }
+}
+
+
+

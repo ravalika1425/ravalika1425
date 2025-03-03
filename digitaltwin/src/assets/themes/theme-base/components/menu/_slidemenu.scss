@@ -1,0 +1,60 @@
+.play-slidemenu {
+    padding: $verticalMenuPadding;
+    background: $menuBg;
+    color: $menuTextColor;
+    border: $menuBorder;
+    border-radius: $borderRadius;
+    width: $menuWidth;
+
+    .play-menuitem-link {
+        @include menuitem-link();
+    }
+
+    &.play-slidemenu-overlay {
+        background: $overlayMenuBg;
+        border: $overlayMenuBorder;
+        box-shadow: $overlayMenuShadow;
+    }
+
+    .play-slidemenu-list {
+        padding: $verticalMenuPadding;
+        background: $overlayMenuBg;
+        border: $overlayMenuBorder;
+        box-shadow: $overlayMenuShadow;
+    }
+
+    .play-slidemenu {
+        &.play-slidemenu-active {
+            > .play-slidemenu-link {
+                background: $menuitemActiveBg;
+
+                .play-slidemenu-text {
+                    color: $menuitemTextActiveColor;
+                }
+
+                .play-slidemenu-icon, .play-slidemenu-icon {
+                    color: $menuitemIconActiveColor;
+                }
+            }
+        }
+    }
+
+    .play-slidemenu-separator {
+        border-top: $divider;
+        margin: $menuSeparatorMargin;
+    }
+
+    .play-slidemenu-icon {
+        font-size: $menuitemSubmenuIconFontSize;
+
+        &.play-icon {
+            width: $menuitemSubmenuIconFontSize;
+            height: $menuitemSubmenuIconFontSize;
+        }
+    }
+
+    .play-slidemenu-backward {
+        padding: $menuitemPadding;
+	    color: $menuitemTextColor;
+    }
+}

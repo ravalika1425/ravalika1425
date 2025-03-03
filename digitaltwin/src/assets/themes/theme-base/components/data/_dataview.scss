@@ -1,0 +1,47 @@
+.play-dataview {
+	.play-paginator-top {
+		border-width: $tableTopPaginatorBorderWidth;
+		border-radius: 0;
+	}
+
+	.play-paginator-bottom {
+		border-width: $tableBottomPaginatorBorderWidth;
+		border-radius: 0;
+	}
+
+	.play-dataview-header {
+		background: $tableHeaderBg;
+		color: $tableHeaderTextColor;
+		border: $tableHeaderBorder;
+		border-width: $tableHeaderBorderWidth;
+		padding: $tableHeaderPadding;
+		font-weight: $tableHeaderFontWeight;
+	}
+
+	.play-dataview-content {
+		background: $tableBodyRowBg;
+		color: $tableBodyRowTextColor;
+		border: $dataViewContentBorder;
+		padding: $dataViewContentPadding;
+	}
+
+	.play-dataview-footer {
+		background: $tableFooterBg;
+		color: $tableFooterTextColor;
+		border: $tableFooterBorder;
+		border-width: $tableFooterBorderWidth;
+		padding: $tableFooterPadding;
+		font-weight: $tableFooterFontWeight;
+		border-bottom-left-radius: $borderRadius;
+		border-bottom-right-radius: $borderRadius;
+	}
+
+	.play-dataview-loading-icon {
+		font-size: $loadingIconFontSize;
+
+		&.play-icon {
+			width: $loadingIconFontSize;
+			height: $loadingIconFontSize;
+		}
+	}
+}

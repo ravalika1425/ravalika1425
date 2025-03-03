@@ -1,0 +1,109 @@
+.play-dock {
+	.play-dock-list-container {
+		background: $dockBg;
+		border: $dockBorder;
+		padding: $dockPadding;
+		border-radius: $dockBorderRadius;
+
+		.play-dock-list {
+			outline: 0 none;
+		}
+	}
+
+	.play-dock-item {
+		padding: $dockItemPadding;
+		border-radius: $dockItemBorderRadius;
+
+		&.play-focus {
+			@include focused-listitem();
+		}
+	}
+
+	.play-dock-action {
+		width: $dockActionWidth;
+		height: $dockActionHeight;
+	}
+
+	&.play-dock-top,
+	&.play-dock-bottom {
+		.play-dock-item-second-prev,
+		.play-dock-item-second-next {
+			margin: 0 $dockSecondItemsMargin;
+		}
+
+		.play-dock-item-prev,
+		.play-dock-item-next {
+			margin: 0 $dockFirstItemsMargin;
+		}
+
+		.play-dock-item-current {
+			margin: 0 $dockCurrentItemMargin;
+		}
+	}
+
+	&.play-dock-left,
+	&.play-dock-right {
+		.play-dock-item-second-prev,
+		.play-dock-item-second-next {
+			margin: $dockSecondItemsMargin 0;
+		}
+
+		.play-dock-item-prev,
+		.play-dock-item-next {
+			margin: $dockFirstItemsMargin 0;
+		}
+
+		.play-dock-item-current {
+			margin: $dockCurrentItemMargin 0;
+		}
+	}
+
+	&.play-dock-mobile {
+		&.play-dock-top,
+		&.play-dock-bottom {
+			.play-dock-list-container {
+				overflow-x: auto;
+				width: 100%;
+
+				.play-dock-list {
+					margin: 0 auto;
+				}
+			}
+		}
+
+		&.play-dock-left,
+		&.play-dock-right {
+			.play-dock-list-container {
+				overflow-y: auto;
+				height: 100%;
+
+				.play-dock-list {
+					margin: auto 0;
+				}
+			}
+		}
+
+		.play-dock-list {
+			.play-dock-item {
+				transform: none;
+				margin: 0;
+			}
+		}
+
+		&.play-dock-magnification {
+			&.play-dock-top,
+			&.play-dock-bottom,
+			&.play-dock-left,
+			&.play-dock-right {
+				.play-dock-item-second-prev,
+				.play-dock-item-second-next,
+				.play-dock-item-prev,
+				.play-dock-item-next,
+				.play-dock-item-current {
+					transform: none;
+					margin: 0;
+				}
+			}
+		}
+	}
+}

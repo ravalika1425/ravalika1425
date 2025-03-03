@@ -1,0 +1,27 @@
+.play-galleria {
+    .play-galleria-indicators {
+        padding: $galleriaIndicatorsPadding;
+
+        .play-galleria-indicator {
+            &.play-highlight {
+                button {
+                    background: $accentColor;
+                    color: $accentTextColor;
+                }
+            }
+        }
+    }
+
+    &.play-galleria-indicator-onitem {
+        .play-galleria-indicators {
+            .play-galleria-indicator {
+                &.play-highlight {
+                    button {
+                        background: rgba($accentColor, .68);
+                        color: $accentTextColor;
+                    }
+                }
+            }
+        }
+    }
+}

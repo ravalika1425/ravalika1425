@@ -1,0 +1,30 @@
+.play-rating {
+    gap: 0;
+
+    .play-rating-item {
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+        justify-content: center;
+
+        &:focus {
+            background: rgba($primaryColor, .12);
+
+            &.play-rating-cancel-item {
+                background: rgba($ratingCancelIconColor, .12);
+            }
+        }
+    }
+
+    &:not(.play-disabled):not(.play-readonly) {
+        .play-rating-item {
+            &:hover {
+                background-color: rgba(0,0,0,.04);
+
+                &.play-rating-cancel-item {
+                    background: rgba($ratingCancelIconColor, .04);
+                }
+            }
+        }
+    }
+}

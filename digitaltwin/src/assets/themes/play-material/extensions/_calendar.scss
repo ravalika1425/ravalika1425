@@ -1,0 +1,137 @@
+.play-calendar-w-btn {
+    border: $inputBorder;
+    background: $inputBg;
+    border-radius: $borderRadius;
+    transition: $formElementTransition;
+
+    .play-inputtext {
+        background-image: none;
+        background-color: transparent;
+        border: 0 none;
+
+        &:enabled:focus {
+            box-shadow: none;
+        }
+    }
+
+    .play-datepicker-trigger.play-button {
+        background-color: transparent;
+        border: 0 none;
+    
+        span {
+            color: $inputIconColor;
+        }
+
+        &:enabled:hover {
+            background: rgba($overlayColor, .04);
+        }
+
+        &:enabled:active,
+        &:focus {
+            background: rgba($overlayColor, .12);
+        }
+
+        &:disabled {
+            background-color: transparent !important;
+        }
+    }
+
+    &:not(.play-disabled):hover {
+        border-color: $inputHoverBorderColor;
+    }
+
+    &:not(.play-disabled).play-inputwrapper-focus {
+        border-color: $inputFocusBorderColor;
+        box-shadow: inset 0 0 0 1px $inputFocusBorderColor,inset 0 0 0 1px $inputFocusBorderColor,inset 0 0 0 1px $inputFocusBorderColor,inset 0 0 0 1px $inputFocusBorderColor;
+    }
+}
+
+.play-datepicker {
+    .play-datepicker-header {
+        border-bottom: 0 none;
+
+        .play-datepicker-title {
+            margin: 0 auto 0 0;
+            order: 1;
+        }
+    
+        .play-datepicker-prev {
+            order: 2;
+        }
+    
+        .play-datepicker-next {
+            order: 3;
+        }
+    }
+
+    table {
+        th {
+            border-bottom: $calendarHeaderBorder;
+            color: $emphasis-low();
+            font-weight: 400;
+            font-size: .875rem;
+        }
+       
+       
+        td {
+            &.play-datepicker-today {
+                > span {
+                    box-shadow: 0 0 0 1px rgba($overlayColor,.38);
+                }
+
+                &.play-highlight {
+                    box-shadow: 0 0 0 1px $highlightBg;
+                }
+            }
+        }
+    }
+}
+
+.play-calendar.play-invalid {
+    .play-inputtext {
+        &:enabled:focus {
+            box-shadow: inset 0 0 0 1px $inputErrorBorderColor,inset 0 0 0 1px $inputErrorBorderColor,inset 0 0 0 1px $inputErrorBorderColor,inset 0 0 0 1px $inputErrorBorderColor;
+        }
+    }
+
+    &.play-calendar-w-btn {
+        border-color: $inputErrorBorderColor;
+
+        .play-inputtext {
+            &:enabled:focus {
+                box-shadow: none;
+            }
+        }
+
+        &:not(.play-disabled).play-inputwrapper-focus {
+            box-shadow: inset 0 0 0 1px $inputErrorBorderColor,inset 0 0 0 1px $inputErrorBorderColor,inset 0 0 0 1px $inputErrorBorderColor,inset 0 0 0 1px $inputErrorBorderColor;
+        }
+    }
+}
+
+.play-input-filled {
+    .play-calendar-w-btn {
+        @include filled-input-wrapper();
+
+        .play-inputtext {
+            border: 0 none;
+        }
+    }
+
+    .play-calendar.play-invalid {
+        .play-inputtext {
+            @include invalid-filled-input();
+        }
+
+        &.play-calendar-w-btn {
+            @include invalid-filled-input-wrapper();
+
+            .play-inputtext,
+            .play-inputtext:enabled:hover,
+            .play-inputtext:enabled:focus {
+                border: 0 none;
+                background-image: none;
+            }
+        }
+    }
+}

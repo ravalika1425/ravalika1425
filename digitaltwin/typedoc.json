@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "downlevelIteration": true,
+    "tsx": "react",
+    "noEmit": true,
+    "importHelpers": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "entryPoints": ["src/App.tsx"],
+  "$schema": "https://typedoc.org/schema.json",
+  "out": "./docs",
+  "excludePrivate": true
+}

@@ -1,0 +1,54 @@
+.play-image-mask {
+    --maskbg: #{$imageMaskBg};
+}
+
+.play-image-preview-indicator {
+    background-color: transparent;
+    color: $imagePreviewIndicatorColor;
+    transition: $actionIconTransition;
+
+    .play-icon {
+        width: $imagePreviewActionIconFontSize;
+        height: $imagePreviewActionIconFontSize;
+    }
+}
+
+.play-image-preview-container {
+    &:hover {
+        > .play-image-preview-indicator {
+            background-color: $imagePreviewIndicatorBg;
+        }
+    }
+}
+
+.play-image-toolbar {
+    padding: $imagePreviewToolbarPadding;
+}
+
+.play-image-action.play-link {
+    color: $imagePreviewActionIconColor;
+    background-color: $imagePreviewActionIconBg;
+    width: $imagePreviewActionIconWidth;
+    height: $imagePreviewActionIconHeight;
+    border-radius: $imagePreviewActionIconBorderRadius;
+    transition: $actionIconTransition;
+    margin-right: $inlineSpacing;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &:hover {
+        color: $imagePreviewActionIconHoverColor;
+        background-color: $imagePreviewActionIconHoverBg;
+    }
+
+    span {
+        font-size: $imagePreviewActionIconFontSize;
+    }
+
+    .play-icon {
+        width: $imagePreviewActionIconFontSize;
+        height: $imagePreviewActionIconFontSize;
+    }
+}

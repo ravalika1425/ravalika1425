@@ -1,0 +1,141 @@
+.play-megamenu {
+	padding: $horizontalMenuPadding;
+	background: $horizontalMenuBg;
+	color: $horizontalMenuTextColor;
+	border: $horizontalMenuBorder;
+	border-radius: $borderRadius;
+
+	.play-megamenu-root-list {
+		outline: 0 none;
+	}
+
+	.play-menuitem {
+		@include menuitem-link();
+	}
+
+	.play-megamenu-panel {
+		background: $overlayMenuBg;
+		color: $menuTextColor;
+		border: $overlayMenuBorder;
+		box-shadow: $overlayMenuShadow;
+	}
+
+	.play-submenu-header {
+		margin: $submenuHeaderMargin;
+		padding: $submenuHeaderPadding;
+		color: $submenuHeaderTextColor;
+		background: $submenuHeaderBg;
+		font-weight: $submenuHeaderFontWeight;
+		border-top-right-radius: $borderRadius;
+		border-top-left-radius: $borderRadius;
+	}
+
+	.play-submenu-list {
+		padding: $verticalMenuPadding;
+		width: $menuWidth;
+
+		.play-menuitem-separator {
+			border-top: $divider;
+			margin: $menuSeparatorMargin;
+		}
+	}
+
+	&.play-megamenu-vertical {
+		width: $menuWidth;
+		padding: $verticalMenuPadding;
+	}
+
+	.play-megamenu-button {
+		width: $actionIconWidth;
+		height: $actionIconHeight;
+		color: $horizontalMenuRootMenuitemIconColor;
+		border-radius: $actionIconBorderRadius;
+		transition: $actionIconTransition;
+
+		&:hover {
+			color: $horizontalMenuRootMenuitemIconHoverColor;
+			background: $horizontalMenuRootMenuitemHoverBg;
+		}
+
+		&:focus {
+			@include focused();
+		}
+	}
+
+	&.play-megamenu-horizontal {
+		.play-megamenu-root-list {
+			> .play-menuitem {
+				@include horizontal-rootmenuitem-link();
+			}
+		}
+	}
+
+	&.play-megamenu-mobile-active {
+		.play-megamenu-root-list {
+			padding: $verticalMenuPadding;
+			background: $overlayMenuBg;
+			border: $overlayMenuBorder;
+			box-shadow: $overlayMenuShadow;
+
+			.play-menu-separator {
+				border-top: $divider;
+				margin: $menuSeparatorMargin;
+			}
+
+			.play-submenu-icon {
+				font-size: $menuitemSubmenuIconFontSize;
+
+				&.play-icon {
+					width: $menuitemSubmenuIconFontSize;
+					height: $menuitemSubmenuIconFontSize;
+				}
+			}
+
+			> .play-menuitem {
+				width: 100%;
+				position: static;
+
+				> .play-menuitem-link {
+					@include menuitem-link();
+
+					> .play-submenu-icon {
+						margin-left: auto;
+					}
+				}
+
+				&.play-menuitem-active {
+					> .play-menuitem-link {
+						> .play-submenu-icon {
+							transform: rotate(-180deg);
+						}
+					}
+				}
+			}
+
+			.play-submenu-list {
+				width: 100%;
+				position: static;
+				box-shadow: none;
+				border: 0 none;
+
+				.play-submenu-icon {
+					transition: transform $transitionDuration;
+					transform: rotate(90deg);
+				}
+
+				.play-menuitem-active {
+					> .play-menuitem-link {
+						> .play-submenu-icon {
+							transform: rotate(-90deg);
+						}
+					}
+				}
+			}
+
+			.play-menuitem {
+				width: 100%;
+				position: static;
+			}
+		}
+	}
+}

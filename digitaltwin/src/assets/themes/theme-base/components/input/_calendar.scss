@@ -1,0 +1,251 @@
+.play-calendar {
+	&.play-invalid.play-component > .play-inputtext {
+		@include invalid-input();
+	}
+
+	&:not(.play-calendar-disabled).play-focus > .play-inputtext {
+		@include focused-input();
+	}
+}
+
+.play-datepicker {
+	padding: $calendarPadding;
+	background: $calendarInlineBg;
+	color: $calendarTextColor;
+	border: $calendarBorder;
+	border-radius: $borderRadius;
+
+	&:not(.play-datepicker-inline) {
+		background: $calendarBg;
+		border: $calendarOverlayBorder;
+		box-shadow: $inputOverlayShadow;
+
+		.play-datepicker-header {
+			background: $calendarHeaderBg;
+		}
+	}
+
+	.play-datepicker-header {
+		padding: $calendarHeaderPadding;
+		color: $calendarHeaderTextColor;
+		background: $calendarInlineHeaderBg;
+		font-weight: $calendarHeaderFontWeight;
+		margin: $inputListHeaderMargin;
+		border-bottom: $calendarHeaderBorder;
+		border-top-right-radius: $borderRadius;
+		border-top-left-radius: $borderRadius;
+
+		.play-datepicker-prev,
+		.play-datepicker-next {
+			@include action-icon();
+		}
+
+		.play-datepicker-title {
+			line-height: $actionIconHeight;
+
+			.play-datepicker-year,
+			.play-datepicker-month {
+				color: $calendarHeaderTextColor;
+				transition: $actionIconTransition;
+				font-weight: $calendarHeaderFontWeight;
+				padding: $calendarHeaderCellPadding;
+
+				&:enabled:hover {
+					color: $calendarMonthYearHeaderHoverTextColor;
+				}
+			}
+
+			.play-datepicker-month {
+				margin-right: $inlineSpacing;
+			}
+		}
+	}
+
+	table {
+		font-size: $fontSize;
+		margin: $calendarTableMargin;
+
+		th {
+			padding: $calendarHeaderCellPadding;
+
+			> span {
+				width: $calendarCellDateWidth;
+				height: $calendarCellDateHeight;
+			}
+		}
+
+		td {
+			padding: $calendarCellDatePadding;
+
+			> span {
+				width: $calendarCellDateWidth;
+				height: $calendarCellDateHeight;
+				border-radius: $calendarCellDateBorderRadius;
+				transition: $listItemTransition;
+				border: $calendarCellDateBorder;
+
+				&.play-highlight {
+					color: $highlightTextColor;
+					background: $highlightBg;
+				}
+
+				&:focus {
+					@include focused();
+				}
+			}
+
+			&.play-datepicker-today {
+				> span {
+					background: $calendarCellDateTodayBg;
+					color: $calendarCellDateTodayTextColor;
+					border-color: $calendarCellDateTodayBorderColor;
+
+					&.play-highlight {
+						color: $highlightTextColor;
+						background: $highlightBg;
+					}
+				}
+			}
+		}
+	}
+
+	.play-datepicker-buttonbar {
+		padding: $calendarButtonBarPadding;
+		border-top: $divider;
+
+		.play-button {
+			width: auto;
+		}
+	}
+
+	.play-timepicker {
+		border-top: $divider;
+		padding: $calendarTimePickerPadding;
+
+		button {
+			@include action-icon();
+
+			&:last-child {
+				margin-top: 0.2em;
+			}
+		}
+
+		span {
+			font-size: $calendarTimePickerTimeFontSize;
+		}
+
+		> div {
+			padding: $calendarTimePickerElementPadding;
+		}
+	}
+
+	&.play-datepicker-timeonly {
+		.play-timepicker {
+			border-top: 0 none;
+		}
+	}
+
+	.play-monthpicker {
+		margin: $calendarTableMargin;
+
+		.play-monthpicker-month {
+			padding: $calendarCellDatePadding;
+			transition: $listItemTransition;
+			border-radius: $borderRadius;
+
+			&.play-highlight {
+				color: $highlightTextColor;
+				background: $highlightBg;
+			}
+		}
+	}
+
+	.play-yearpicker {
+		margin: $calendarTableMargin;
+
+		.play-yearpicker-year {
+			padding: $calendarCellDatePadding;
+			transition: $listItemTransition;
+			border-radius: $borderRadius;
+
+			&.play-highlight {
+				color: $highlightTextColor;
+				background: $highlightBg;
+			}
+		}
+	}
+
+	&.play-datepicker-multiple-month {
+		.play-datepicker-group {
+			border-left: $divider;
+			padding-right: $calendarPadding;
+			padding-left: $calendarPadding;
+			padding-top: 0;
+			padding-bottom: 0;
+
+			&:first-child {
+				padding-left: 0;
+			}
+
+			&:last-child {
+				padding-right: 0;
+				border-left: 0 none;
+			}
+		}
+	}
+
+	&:not(.play-disabled) {
+		table {
+			td {
+				span:not(.play-highlight):not(.play-disabled) {
+					&:hover {
+						background: $calendarCellDateHoverBg;
+					}
+
+					&:focus {
+						@include focused();
+					}
+				}
+			}
+		}
+
+		.play-monthpicker {
+			.play-monthpicker-month {
+				&:not(.play-disabled) {
+					&:not(.play-highlight):hover {
+						background: $calendarCellDateHoverBg;
+					}
+
+					&:focus {
+						@include focused();
+					}
+				}
+			}
+		}
+
+		.play-yearpicker {
+			.play-yearpicker-year {
+				&:not(.play-disabled) {
+					&:not(.play-highlight):hover {
+						background: $calendarCellDateHoverBg;
+					}
+
+					&:focus {
+						@include focused();
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $calendarBreakpoint) {
+	.play-datepicker {
+		table {
+			th,
+			td {
+				padding: $calendarCellDatePaddingSM;
+			}
+		}
+	}
+}
