@@ -1,0 +1,81 @@
+    .maincontainer{
+        display:flex;
+        gap:5rem;
+        /* margin-top:1rem; */
+        /* width: 100%; */
+        justify-content: center;
+        align-items: center;
+        /* width:100%; */
+    
+    }
+
+    .formcontainer{
+        
+        /* width:100%; */
+        height:100%;
+        margin-right:0 auto;
+    }
+    .title{
+        font-size:18px;
+        font-weight:bold;
+    }
+    .detailscontainer{
+        width: 600px;
+        height: 530px;
+        /* background-color: #f0f0f0; */
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+        border-radius:10px;
+        padding:2rem;
+        margin-top:2rem;
+    }
+    .inputcontainer{
+        display:flex;
+        justify-content: space-between;
+        margin:1rem 0rem;   
+        min-height:45px;
+        gap:10px;
+    }
+    .select-container {
+        width: 100%; /* Ensures the Select container takes the full width */
+        margin: 0;   /* Adjusts the margin as needed */
+    }
+    
+    .select-container > div {
+        width: 100%;
+    }
+    .buttoncontainer{
+        display:flex;
+        gap:1rem;
+        float:right;
+        margin-top:auto;
+    }
+    
+    .submitbtn{
+        padding:10px;
+        background-color:black;
+        border-radius: 5px;
+        border:1px solid black;
+        color:white;
+        font-weight:bold;
+      }
+      .closebtn{
+        padding:10px;
+        background-color:white;
+        border-radius: 5px;
+        border:1px solid black;
+        color:black;
+        font-weight:bold;
+        
+      }
+      .disablebtn{
+        padding:10px;
+        background-color:rgb(206, 206, 206);
+        border-radius: 5px;
+        border:1px solid rgb(206, 206, 206);
+        color:rgb(133, 132, 132);
+        font-weight:bold;
+     
+      }
+      .input{
+        margin:1rem;
+      }

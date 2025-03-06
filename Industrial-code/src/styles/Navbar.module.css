@@ -1,0 +1,328 @@
+/* General Styles */
+.maincontainer {
+  /* width: 100%; */
+  height: auto;
+  /* position: absolute; */
+  
+  background-color: #373636;
+  /* padding: 20px 0; */
+  /* display: flex; */
+  align-items: center;
+  /* justify-content: space-between; */
+  /* margin: 0 1rem; */
+  cursor: pointer;
+  display: flex;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  /* box-shadow: hsl(210, 7%, 95%); */
+  
+}
+
+
+
+.innercontainer {
+  margin: 0 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.innercontainer img {
+  height: 45px;
+  width: 45px;
+}
+
+.titlecontainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.titlecontainer h4 {
+  font-family: sans-serif;
+  margin: 0;
+  font-weight: bold;
+}
+
+.linkscontainer {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 8px;
+  
+}
+
+.linkitem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  /* color: #007bff; */
+  color: #fff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.linkitem:hover {
+  transform: translateY(-2px);
+}
+
+.link {
+  text-decoration: none;
+  /* color: #007bff; */
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 3px;
+}
+
+.linkitem p {
+  margin: 3px 0 0 0;
+}
+
+.link:hover,
+.link:active {
+  text-decoration: none;
+  /* color: black; */
+}
+
+/* Logo */
+/* .logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 0.5rem;
+} */
+
+/* Button Styles */
+.primaryButton {
+  background: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin: auto
+}
+
+.primaryButton:hover {
+  background: #0056b3;
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.secondaryButton {
+  display: block;
+  margin: auto;
+  background: #f8f9fa;
+  color: #333;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.secondaryButton:hover {
+  background: #e2e6ea;
+}
+
+.disabledButton {
+  background: #ccc;
+  color: #777;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: not-allowed;
+  margin: auto;
+  text-align: center;
+
+}
+
+/* Popup Styles */
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popupContent {
+  background: #ffffff;
+  width: 400px;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Login Header */
+.loginHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.loginHeader h2 {
+  align-items: center;
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.closeButton {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Toggle Modes */
+.toggleMode {
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 15px;
+  font-size: 1rem;
+  color: #1b1818;
+  text-transform: uppercase;
+  transition: color 0.3s;
+  padding-bottom: 20px;
+}
+
+.toggleMode:hover,
+.toggleMode.active {
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* Input Fields */
+.inputFields {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input {
+  margin: 1rem;
+}
+
+/* Button Container */
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Extra Container for Forgot Password and Register */
+.extraContainer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.extraContainer p {
+  margin: 5px 0;
+}
+
+.registerLink,
+.forgotLink {
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.registerLink:hover,
+.forgotLink:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .innercontainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .titlecontainer h4 {
+    font-size: 1rem;
+  }
+
+  .linkscontainer {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .linkitem {
+    gap: 3px;
+  }
+
+  .popupContent {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .innercontainer {
+    padding: 0 1rem;
+  }
+
+  .titlecontainer h4 {
+    font-size: 0.9rem;
+  }
+
+  .linkscontainer {
+    gap: 1rem;
+  }
+
+  .linkitem p {
+    font-size: 0.85rem;
+  }
+
+  .logo {
+    width: 450px;
+    height: 100px;
+    /* background-color: "#0056b3s"; */
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

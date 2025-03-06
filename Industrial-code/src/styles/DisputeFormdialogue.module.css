@@ -1,0 +1,65 @@
+/* Dialog Title */
+.dialogTitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  background-color: #373636;
+  line-height: 1.5;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Input Fields */
+.inputField {
+  background-color: #f9f9f9;
+  color: #373636;
+  border-radius: 5px;
+}
+
+/* Dialog Actions */
+.dialogActions {
+  justify-content: center;
+  margin-top: 15px;
+}
+
+/* Buttons */
+.cancelButton {
+  background-color: #f8f9fa;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cancelButton:hover {
+  background-color: #e2e6ea;
+}
+
+.submitButton {
+  background-color: #373636;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submitButton:hover {
+  background-color: #373636;
+}

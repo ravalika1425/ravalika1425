@@ -1,0 +1,91 @@
+.maincontainer{
+    display:flex;
+    gap:1rem;
+    margin: 5rem 10rem;
+}
+
+.profilecontainer{
+    width: 27rem;
+    height: auto;
+    border-radius: 0.5rem;
+    padding: 10px 20px;
+    box-shadow: 10px 10px 20px rgb(0,0,0,0.1);
+}
+.imagecontainer{
+    width: 12rem;
+    height: 12rem;
+    border: 5px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:50%;
+    margin-left:auto;
+    margin-right:auto;
+}
+.image{
+    width:10rem;
+    height:10rem;
+    border-radius: 50%;
+}
+.detailscontainer{
+    margin-top:1rem;
+}
+.detailitem{
+    display: flex;
+    gap: 0.5rem;
+    font-size: 12px;
+    align-items: center;
+}
+.detailitem h5{
+    font-size: 15px;
+    margin-top:8px;
+}
+.role{
+    border: 2px solid;
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+.editcontainer{
+    display:flex;
+    align-items:center;
+    gap:5px;
+    margin: 1rem;
+    width:100%;
+    justify-content: center;
+}
+.editprofilecontainer{
+    box-shadow : 10px 10px 20px rgba(0,0,0,0.1);
+    padding: 22px 20px;
+    border-radius:10px;
+    width:60rem;
+}
+.edititem{
+    display:flex;
+    gap:2rem;
+    margin:1rem;
+}
+.buttoncontainer{
+    display:flex;
+    gap:1rem;
+    margin:1rem;
+}
+.cardscontainer{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    gap:2rem;
+}
+.card{
+    width: 8rem;
+    height: 6rem;
+    background-color: #dfdfdf;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 10px 10px 40px rgba(0,0,0,0.1);
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

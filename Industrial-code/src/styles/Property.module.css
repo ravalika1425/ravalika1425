@@ -1,0 +1,126 @@
+.buttondev {
+    background-color: #ffa726; /* A typical warning or orange color */
+    color: white; /* White text for better contrast */
+    padding: 10px 20px; /* Padding around the text */
+    font-size: 16px; /* Font size */
+    border-radius: 4px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25); /* Subtle shadow for depth */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+.buttonpro:hover{
+    background-color: #4CAF50; 
+    color: white;
+}
+
+.container {
+    padding: 10px;
+    background-color: whitesmoke;
+    
+
+  }
+  
+  .header {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    margin: 10px;
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    display: flex;
+    transition: 0.3s;
+    width: auto;
+    margin: 10px;
+    height: auto;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+  }
+  
+  .image {
+    width: 25%;
+    height: auto;
+    margin: 10px;
+  }
+  
+  .description {
+    padding: 2px 15px;
+    text-align: left;
+  }
+  
+  .view {
+    padding: 2px 15px;
+    text-align: bottom;    
+
+  } 
+  
+  .divider {
+    display: flex;
+    flex-direction: row;
+    justify-content: inherit;
+    /* align-items: center; */
+  }
+
+/* CSS module styling for the buttondev class */
+.property_buttondev {
+    background-color: #d32f2f; /* A darker red for the delete button */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding around the text */
+    font-size: 16px; /* Font size */
+    border-radius: 4px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25); /* Subtle shadow for depth */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
+.property_buttondev:focus, .styles_buttondev:active {
+    outline: none; /* Removes the default focus outline */
+    border: none; /* Removes any default border */
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.4); /* Adds a subtle white outline */
+}
+
+.styles_divider {
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+    justify-content: space-between; /* Spreads out the items */
+    padding: 10px;
+    background-color: #f2f2f2; /* Light background color */
+}
+
+/* Styling for the heading */
+.styles_heading {
+    margin: 0; /* Removes default margin */
+    font-size: 24px; /* Sets font size */
+    color: #333; /* Dark color for the heading */
+}
+
+/* Styling for the search input */
+.styles_search {
+    padding: 8px 15px;
+    font-size: 16px; /* Font size for input text */
+    border: 1px solid #ddd; /* Light border for the input */
+    border-radius: 4px; /* Rounded corners for the input */
+    outline: none; 
+    width: 50%;
+}
+
+.styles_search:focus {
+    border-color: #aaa; /* Darker border on focus */
+}
+
+/* Styling for the button */
+.styles_buttondev {
+    background-color: #1976d2; /* Primary color */
+    color: white; /* White text */
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.styles_buttondev:hover {
+    background-color: #1565c0; /* Darker shade on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
+}

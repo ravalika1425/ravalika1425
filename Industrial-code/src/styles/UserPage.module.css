@@ -1,0 +1,64 @@
+.title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.maincontainer {
+    margin: 1rem;
+}
+
+.innercontainer {
+    margin-top: 1rem;
+    padding: 10px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+
+}
+
+.useritem {
+    background-color: rgb(233, 231, 231);
+    margin-top: 5px;
+    border-bottom: 2px solid white;
+    cursor: pointer;
+}
+
+.item {
+    padding: 1rem;
+    text-align: center;
+    max-width: 10rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.heading {
+    background-color: black;
+    color: white;
+}
+
+.useritem:hover {
+    background-color: rgb(224, 224, 224);
+}
+
+.outercontainer {
+    display: flex;
+    justify-content: center;
+}
+
+.buttonscontainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.propertycontainer {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-left: auto;
+    width: 100%;
+    justify-content: center;
+}
